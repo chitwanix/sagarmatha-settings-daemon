@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/autoreconf.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/utils.mk
+include /usr/share/cdbs/1/class/gnome.mk
+include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
+include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+
+LDFLAGS += -Wl,-O1 -Wl,-z,defs -Wl,--warn-unresolved-symbols -Wl,--as-needed
+
+# To avoid running configure twice (because gnome-autogen.sh)
+export NOCONFIGURE=yes
+
+DEB_DH_MAKESHLIBS_ARGS_ALL += --no-act
+DEB_CONFIGURE_EXTRA_FLAGS = --disable-systemd --disable-packagekit
+
+build/sagarmatha-settings-daemon::
+	gcc -o sagarmatha-settings-daemon/sagarmatha-update-wallpaper-cache debian/sagarmatha-update-wallpaper-cache.c `pkg-config --cflags --libs glib-2.0 gdk-3.0 gdk-x11-3.0 gio-2.0 sagarmatha-desktop`
+
+install/sagarmatha-settings-daemon::
+	/usr/bin/install -c sagarmatha-settings-daemon/sagarmatha-update-wallpaper-cache 'debian/tmp/usr/lib/sagarmatha-settings-daemon'
+	install -m 644 -D debian/sagarmatha-settings-daemon.user-session.upstart debian/sagarmatha-settings-daemon/usr/share/upstart/sessions/sagarmatha-settings-daemon.conf
+	install -m 644 -D debian/sagarmatha-settings-daemon.user-session.desktop debian/sagarmatha-settings-daemon/usr/share/upstart/xdg/autostart/sagarmatha-settings-daemon.desktop
+
+binary-install/sagarmatha-settings-daemon::
+	find debian -name '*.a' -delete
+	find debian -name '*.la' -delete
+
+override_dh_autoreconf:
+	dh_autoreconf --as-needed ./autogen.sh
+
+common-binary-post-install-arch:: list-missing
+
+clean::
+	rm -f sagarmatha-settings-daemon/sagarmatha-update-wallpaper-cache
+

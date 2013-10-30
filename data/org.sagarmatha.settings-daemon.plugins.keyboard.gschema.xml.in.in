@@ -1,0 +1,14 @@
+<schemalist>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.keyboard" path="/org/sagarmatha/settings-daemon/plugins/keyboard/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>6</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+</schemalist>

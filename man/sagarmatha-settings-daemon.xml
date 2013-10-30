@@ -1,0 +1,140 @@
+<?xml version='1.0'?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+        "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+
+<refentry id="sagarmatha-settings-daemon">
+
+        <refentryinfo>
+                <title>sagarmatha-settings-daemon</title>
+                <productname>Sagarmatha</productname>
+
+                <authorgroup>
+                        <author>
+                                <contrib>Maintainer</contrib>
+                                <firstname>Bastien</firstname>
+                                <surname>Nocera</surname>
+                                <email>hadess@hadess.net</email>
+                        </author>
+                </authorgroup>
+
+        </refentryinfo>
+
+        <refmeta>
+                <refentrytitle>sagarmatha-settings-daemon</refentrytitle>
+                <manvolnum>1</manvolnum>
+                <refmiscinfo class="manual">User Commands</refmiscinfo>
+        </refmeta>
+
+        <refnamediv>
+                <refname>sagarmatha-settings-daemon</refname>
+                <refpurpose>Sagarmatha settings daemon</refpurpose>
+        </refnamediv>
+
+        <refsynopsisdiv>
+                <cmdsynopsis>
+                        <command>sagarmatha-settings-daemon <arg choice="opt" rep="repeat">OPTION</arg></command>
+                </cmdsynopsis>
+        </refsynopsisdiv>
+
+        <refsect1>
+                <title>Description</title>
+
+                <para><command>sagarmatha-settings-daemon</command> provides many
+                session-wide services and functions that require a
+                long-running process.
+                Among the services implemented by sagarmatha-settings-daemon
+                are an XSettings manager, which provides theming, font
+                and other settings to GTK+ applications, and a clipboard
+                manager, which preserves clipboard contents when an
+                application exits.
+                Many user interface elements of
+                <command>sagarmatha</command> and
+                <command>sagarmatha-settings</command> rely on
+                sagarmatha-settings-daemon for their functionality.
+                </para>
+
+                <para>The internal architecture of sagarmatha-settings-daemon
+                consists of a number of plugins, which provide functionality
+                such as printer notifications, software update monitoring,
+                background changing, etc. For debugging purposes, these
+                plugins can be individually disabled by changing the
+                gsettings key <literal>org.sagarmatha.settings-daemon.plugins.<replaceable>plugin-name</replaceable>.active</literal>, where
+                <replaceable>plugin-name</replaceable> is
+                the name of the plugin. To see a list of all plugins,
+                use the command
+                <userinput>
+                gsettings list-children org.sagarmatha.settings-daemon.plugins
+                </userinput>
+                </para>
+
+                <para>sagarmatha-settings-daemon takes the name
+                org.sagarmatha.SettingsDaemon on the session bus to ensure
+                that only one instance is running. Some plugins export
+                objects under this name to make their functionality
+                available to other applications. The interfaces of
+                these objects should generally be considered private
+                and unstable.</para>
+
+                <para>sagarmatha-settings-daemon is a required component of
+                the Sagarmatha desktop, i.e. it is listed in the
+                RequiredComponents field of
+                <filename>/usr/share/sagarmatha-session/sessions/sagarmatha.session</filename>.
+                It is started in the initialization phase of the session,
+                and <command>sagarmatha-session</command> will restart it
+                if it crashes.
+                </para>
+
+        </refsect1>
+
+        <refsect1>
+                <title>Options</title>
+
+                <variablelist>
+                        <varlistentry>
+                                <term><option>-h</option>, <option>--help</option></term>
+
+                                <listitem><para>Prints a short help
+                                text and exits.</para></listitem>
+                        </varlistentry>
+
+                        <varlistentry>
+                                <term><option>--debug</option></term>
+
+                                <listitem><para>Enables debugging code.</para></listitem>
+                        </varlistentry>
+
+                        <varlistentry>
+                                <term><option>--timed-exit</option></term>
+
+                                <listitem><para>Exits after a timeout (30 seconds) for debugging.</para></listitem>
+                        </varlistentry>
+
+                </variablelist>
+        </refsect1>
+
+        <refsect1>
+                <title>Files</title>
+                <variablelist>
+                        <varlistentry>
+                                <term><filename>/usr/share/sagarmatha-session/sessions/sagarmatha.session</filename></term>
+
+                                <listitem><para>GNOME session definition file where sagarmatha-settings-daemon is listed as a required component.</para></listitem>
+                        </varlistentry>
+                        <varlistentry>
+                                <term><filename>/etc/xdg/autostart/sagarmatha-settings-daemon.desktop</filename></term>
+
+                                <listitem><para>Autostart file for sagarmatha-settings-daemon, where its autostart phase is set.</para></listitem>
+                        </varlistentry>
+                </variablelist>
+        </refsect1>
+
+        <refsect1>
+                <title>See Also</title>
+                <para>
+                        <citerefentry><refentrytitle>sagarmatha</refentrytitle><manvolnum>1</manvolnum></citerefentry>,
+                        <citerefentry><refentrytitle>sagarmatha-settings</refentrytitle><manvolnum>1</manvolnum></citerefentry>,
+                        <citerefentry><refentrytitle>sagarmatha-session</refentrytitle><manvolnum>1</manvolnum></citerefentry>
+                </para>
+        </refsect1>
+
+</refentry>

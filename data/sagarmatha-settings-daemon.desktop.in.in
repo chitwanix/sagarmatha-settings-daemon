@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+_Name=Sagarmatha Settings Daemon
+Exec=@libexecdir@/sagarmatha-settings-daemon
+OnlyShowIn=GNOME;
+NoDisplay=true
+X-GNOME-Autostart-Phase=Initialization
+X-GNOME-Autostart-Notify=true
+X-GNOME-AutoRestart=true

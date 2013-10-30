@@ -1,0 +1,14 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+libexecdir=@libexecdir@
+plugindir=${libdir}/sagarmatha-settings-daemon-@CSD_API_VERSION@
+binary=${libexecdir}/sagarmatha-settings-daemon
+
+Name: sagarmatha-settings-daemon
+Description: Utility library for accessing sagarmatha-settings-daemon over DBUS
+Requires: glib-2.0
+Version: @VERSION@
+Libs: -L${libdir}
+Cflags: -I${includedir}/sagarmatha-settings-daemon-@CSD_API_VERSION@

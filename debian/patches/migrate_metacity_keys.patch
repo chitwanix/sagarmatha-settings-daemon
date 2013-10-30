@@ -1,0 +1,15 @@
+Description: Migrate screenshot/terminal keys from metacity gconf as well
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1058004
+
+--- sagarmatha-settings-daemon/data/sagarmatha-settings-daemon.convert.old	2012-10-02 08:50:01.384413000 +0300
++++ sagarmatha-settings-daemon/data/sagarmatha-settings-daemon.convert	2012-10-02 09:05:22.243096198 +0300
+@@ -61,6 +61,9 @@
+ volume-mute = /apps/sagarmatha_settings_daemon/keybindings/volume_mute
+ volume-up = /apps/sagarmatha_settings_daemon/keybindings/volume_up
+ www = /apps/sagarmatha_settings_daemon/keybindings/www
++screenshot = /apps/metacity/global_keybindings/run_command_screenshot
++window-screenshot = /apps/metacity/global_keybindings/run_command_window_screenshot
++terminal = /apps/metacity/global_keybindings/run_command_terminal
+ 
+ [org.sagarmatha.settings-daemon.plugins.mouse]
+ active = /apps/sagarmatha_settings_daemon/plugins/mouse/active

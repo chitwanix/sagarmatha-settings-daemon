@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Sagarmatha Settings Daemon
+Exec=/usr/lib/sagarmatha-settings-daemon/sagarmatha-settings-daemon
+Hidden=true
+Name[en_US]=sagarmatha-settings-daemon.user-session.desktop

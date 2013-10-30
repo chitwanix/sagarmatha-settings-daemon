@@ -1,0 +1,131 @@
+<schemalist>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins" path="/org/sagarmatha/settings-daemon/plugins/">
+    <child name="a11y-keyboard" schema="org.sagarmatha.settings-daemon.plugins.a11y-keyboard"/>
+    <child name="a11y-settings" schema="org.sagarmatha.settings-daemon.plugins.a11y-settings"/>
+    <child name="background" schema="org.sagarmatha.settings-daemon.plugins.background"/>
+    <child name="clipboard" schema="org.sagarmatha.settings-daemon.plugins.clipboard"/>
+    <child name="color" schema="org.sagarmatha.settings-daemon.plugins.color"/>
+    <child name="cursor" schema="org.sagarmatha.settings-daemon.plugins.cursor"/>
+    <child name="font" schema="org.sagarmatha.settings-daemon.plugins.font"/>
+    <child name="housekeeping" schema="org.sagarmatha.settings-daemon.plugins.housekeeping"/>
+    <child name="keyboard" schema="org.sagarmatha.settings-daemon.plugins.keyboard"/>
+    <child name="media-keys" schema="org.sagarmatha.settings-daemon.plugins.media-keys"/>
+    <child name="mouse" schema="org.sagarmatha.settings-daemon.plugins.mouse"/>
+    <child name="orientation" schema="org.sagarmatha.settings-daemon.plugins.orientation"/>
+    <child name="power" schema="org.sagarmatha.settings-daemon.plugins.power"/>
+    <child name="print-notifications" schema="org.sagarmatha.settings-daemon.plugins.print-notifications"/>
+    <child name="screensaver-proxy" schema="org.sagarmatha.settings-daemon.plugins.screensaver-proxy"/>
+    <child name="smartcard" schema="org.sagarmatha.settings-daemon.plugins.smartcard"/>
+    <child name="sound" schema="org.sagarmatha.settings-daemon.plugins.sound"/>
+    <child name="xrandr" schema="org.sagarmatha.settings-daemon.plugins.xrandr"/>
+    <child name="xsettings" schema="org.sagarmatha.settings-daemon.plugins.xsettings"/>
+  </schema>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.a11y-keyboard" path="/org/sagarmatha/settings-daemon/plugins/a11y-keyboard/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>7</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.a11y-settings" path="/org/sagarmatha/settings-daemon/plugins/a11y-settings/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>7</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.clipboard" path="/org/sagarmatha/settings-daemon/plugins/clipboard/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>99</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.cursor" path="/org/sagarmatha/settings-daemon/plugins/cursor/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>99</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.font" path="/org/sagarmatha/settings-daemon/plugins/font/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>4</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.mouse" path="/org/sagarmatha/settings-daemon/plugins/mouse/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>7</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.screensaver-proxy" path="/org/sagarmatha/settings-daemon/plugins/screensaver-proxy/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>8</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.smartcard" path="/org/sagarmatha/settings-daemon/plugins/smartcard/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>8</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.sagarmatha.settings-daemon.plugins.sound" path="/org/sagarmatha/settings-daemon/plugins/sound/">
+    <key name="active" type="b">
+      <default>true</default>
+      <_summary>Activation of this plugin</_summary>
+      <_description>Whether this plugin would be activated by sagarmatha-settings-daemon or not</_description>
+    </key>
+    <key name="priority" type="i">
+      <default>5</default>
+      <_summary>Priority to use for this plugin</_summary>
+      <_description>Priority to use for this plugin in sagarmatha-settings-daemon startup queue</_description>
+    </key>
+  </schema>
+</schemalist>

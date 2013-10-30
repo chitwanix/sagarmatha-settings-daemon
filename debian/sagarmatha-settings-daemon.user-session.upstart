@@ -1,0 +1,8 @@
+description "The Sagarmatha Settings Daemon"
+author "Michael Webster <miketwebster@gmail.com>"
+
+start on started dbus and starting sagarmatha-session
+stop on stopping sagarmatha-session
+
+respawn
+exec /usr/lib/sagarmatha-settings-daemon/sagarmatha-settings-daemon
