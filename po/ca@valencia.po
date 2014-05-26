@@ -1568,7 +1568,7 @@ msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to another disk or partition."
 msgstr ""
-"Podeu alliberar espai de disc buidant la paperera, suprimint programes o "
+"Podeu alliberar espai de disc buidant la paperera, suprichitwanix programes o "
 "fitxers que no utilitzeu o movent fitxers a un altre disc o partició."
 
 #: ../plugins/housekeeping/gsd-ldsm-dialog.c:103
@@ -1576,7 +1576,7 @@ msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to another disk or partition."
 msgstr ""
-"Podeu alliberar espai de disc suprimint programes o fitxers que no utilitzeu "
+"Podeu alliberar espai de disc suprichitwanix programes o fitxers que no utilitzeu "
 "o movent fitxers a un altre disc o partició."
 
 #: ../plugins/housekeeping/gsd-ldsm-dialog.c:108
@@ -1584,7 +1584,7 @@ msgid ""
 "You can free up disk space by emptying the Trash, removing unused programs "
 "or files, or moving files to an external disk."
 msgstr ""
-"Podeu alliberar espai de disc buidant la paperera, suprimint programes o "
+"Podeu alliberar espai de disc buidant la paperera, suprichitwanix programes o "
 "fitxers que no utilitzeu o movent fitxers a un disc extern."
 
 #: ../plugins/housekeeping/gsd-ldsm-dialog.c:111
@@ -1592,7 +1592,7 @@ msgid ""
 "You can free up disk space by removing unused programs or files, or by "
 "moving files to an external disk."
 msgstr ""
-"Podeu alliberar espai de disc suprimint programes o fitxers que no utilitzeu "
+"Podeu alliberar espai de disc suprichitwanix programes o fitxers que no utilitzeu "
 "o movent fitxers a un disc extern."
 
 #: ../plugins/housekeeping/gsd-ldsm-dialog.c:445
@@ -2762,7 +2762,7 @@ msgstr "S'ha completat la impressió"
 #: ../plugins/print-notifications/gsd-print-notifications-manager.c:490
 #: ../plugins/print-notifications/gsd-print-notifications-manager.c:510
 msgid "Printing"
-msgstr "S'està imprimint"
+msgstr "S'està imprichitwanix"
 
 #. Translators: This is a title of a report notification for a printer
 #: ../plugins/print-notifications/gsd-print-notifications-manager.c:727
@@ -3810,10 +3810,10 @@ msgstr "Gestiona els paràmetres d'X"
 #~ msgstr "Tipus de lletra"
 
 #~ msgid "Removing item %lu of %lu"
-#~ msgstr "S'està suprimint l'element %lu de %lu"
+#~ msgstr "S'està suprichitwanix l'element %lu de %lu"
 
 #~ msgid "Removing: %s"
-#~ msgstr "S'està suprimint: %s"
+#~ msgstr "S'està suprichitwanix: %s"
 
 #~ msgid "Emptying the trash"
 #~ msgstr "S'està buidant la paperera"

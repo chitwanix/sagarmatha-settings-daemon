@@ -1,3 +1,6 @@
-sagarmatha-settings-daemon (2.0.5) khukuri; urgency=low
-  * 2.0.5
- -- Arun Kumar Pyasi <root@chitwanix.com>  Mon, 28 Oct 2013 15:26:23 +0100
+sagarmatha-settings-daemon (1.0.0) khukuri; urgency=low
+
+  * 1.0.0 Initial Port from sagarmatha-settings-daemon 2.0.8
+
+ -- Arun Kr. Pyasi <root@chitwanix.com>  Mon, 25 Nov 2013 18:39:05 +0000
+

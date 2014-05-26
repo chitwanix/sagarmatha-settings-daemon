@@ -2859,7 +2859,7 @@ msgstr "Pemutakhiran dibatalkan."
 #: ../plugins/updates/gsd-updates-manager.c:171
 msgid "An offline update was requested but no packages required updating."
 msgstr ""
-"Pemutakhiran luring diminta tapi tak ada paket yang memerlukan pemutakhiran."
+"Pemutakhiran luring dichitwanixa tapi tak ada paket yang memerlukan pemutakhiran."
 
 #. TRANSLATORS: we ran out of disk space
 #: ../plugins/updates/gsd-updates-manager.c:175

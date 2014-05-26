@@ -2447,7 +2447,7 @@ msgid ""
 "b> when the battery becomes completely empty."
 msgstr ""
 "Az akkumulátor a kritikus szint alatt van, és ez a számítógép <b>ki fog "
-"kapcsolni</b>, amint az akkumulátor teljesen lemerül."
+"kapcsolni</b>, achitwanix az akkumulátor teljesen lemerül."
 
 #. TRANSLATORS: computer will suspend
 #: ../plugins/power/gsd-power-manager.c:1715

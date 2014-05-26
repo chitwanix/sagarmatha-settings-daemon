@@ -38,7 +38,7 @@ msgstr "Gnomen asetuspalvelin"
 
 #: ../data/org.sagarmatha.settings-daemon.peripherals.gschema.xml.in.in.h:1
 msgid "Smartcard removal action"
-msgstr "Älykortin irrottamistoiminto"
+msgstr "Älykortin irrottamistoichitwanixo"
 
 #: ../data/org.sagarmatha.settings-daemon.peripherals.gschema.xml.in.in.h:2
 msgid ""
@@ -46,7 +46,7 @@ msgid ""
 "action will get performed when the smartcard used for log in is removed."
 msgstr ""
 "Aseta tämä arvoon \"none\" (ei mitään), \"lock-screen\" (lukitse näyttö) tai "
-"\"force-logout\" (kirjaudu ulos). Toiminto suoritetaan, jos kirjautumiseen "
+"\"force-logout\" (kirjaudu ulos). Toichitwanixo suoritetaan, jos kirjautumiseen "
 "käytetty älykortti irrotetaan koneesta."
 
 #: ../data/org.sagarmatha.settings-daemon.peripherals.gschema.xml.in.in.h:3
@@ -759,7 +759,7 @@ msgstr ""
 
 #: ../data/org.sagarmatha.settings-daemon.plugins.power.gschema.xml.in.in.h:9
 msgid "Percentage action is taken"
-msgstr "Prosenttiosuus, jonka jälkeen toiminto suoritetaan"
+msgstr "Prosenttiosuus, jonka jälkeen toichitwanixo suoritetaan"
 
 #: ../data/org.sagarmatha.settings-daemon.plugins.power.gschema.xml.in.in.h:10
 msgid ""
@@ -767,7 +767,7 @@ msgid ""
 "valid when use-time-for-policy is false."
 msgstr ""
 "Prosenttimäärä täyden akun varauksesta, kun akun kriittisen alhaiseen "
-"varaukseen yhdistetty toiminto suoritetaan. Vaikuttaa vain, jos use-time-for-"
+"varaukseen yhdistetty toichitwanixo suoritetaan. Vaikuttaa vain, jos use-time-for-"
 "policy on epätosi."
 
 #: ../data/org.sagarmatha.settings-daemon.plugins.power.gschema.xml.in.in.h:11
@@ -796,7 +796,7 @@ msgstr ""
 
 #: ../data/org.sagarmatha.settings-daemon.plugins.power.gschema.xml.in.in.h:15
 msgid "The time remaining when action is taken"
-msgstr "Jäljellä oleva aika, kun toiminto suoritetaan"
+msgstr "Jäljellä oleva aika, kun toichitwanixo suoritetaan"
 
 #: ../data/org.sagarmatha.settings-daemon.plugins.power.gschema.xml.in.in.h:16
 msgid ""
@@ -804,7 +804,7 @@ msgid ""
 "Only valid when use-time-for-policy is true."
 msgstr ""
 "Akun kesto sekunteina, kun akun kriittisen alhaiseen varaukseen liitetty "
-"toiminto suoritetaan. Vaikuttaa vain, jos use-time-for-policy on tosi."
+"toichitwanixo suoritetaan. Vaikuttaa vain, jos use-time-for-policy on tosi."
 
 #: ../data/org.sagarmatha.settings-daemon.plugins.power.gschema.xml.in.in.h:17
 msgid "Whether to use time-based notifications"
@@ -1348,12 +1348,12 @@ msgid ""
 "Select how to open \"%s\" and whether to perform this action in the future "
 "for other media of type \"%s\"."
 msgstr ""
-"Valitse, kuinka kohde ”%s” avataan ja suoritetaanko sama toiminto aina "
+"Valitse, kuinka kohde ”%s” avataan ja suoritetaanko sama toichitwanixo aina "
 "havaittaessa ”%s”-tyyppisiä asemia."
 
 #: ../plugins/automount/gsd-autorun.c:769
 msgid "_Always perform this action"
-msgstr "_Suorita aina tämä toiminto"
+msgstr "_Suorita aina tämä toichitwanixo"
 
 #: ../plugins/automount/gsd-autorun.c:785
 msgid "_Eject"
@@ -1588,7 +1588,7 @@ msgstr "Medianäppäinten liitännäinen"
 
 #: ../plugins/mouse/gsd-mouse-manager.c:916
 msgid "Could not enable mouse accessibility features"
-msgstr "Hiiren esteettömyystoimintoja ei voitu ottaa käyttöön"
+msgstr "Hiiren esteettömyystoichitwanixoja ei voitu ottaa käyttöön"
 
 #: ../plugins/mouse/gsd-mouse-manager.c:918
 msgid ""

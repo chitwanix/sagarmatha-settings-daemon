@@ -20,8 +20,6 @@ build/sagarmatha-settings-daemon::
 
 install/sagarmatha-settings-daemon::
 	/usr/bin/install -c sagarmatha-settings-daemon/sagarmatha-update-wallpaper-cache 'debian/tmp/usr/lib/sagarmatha-settings-daemon'
-	install -m 644 -D debian/sagarmatha-settings-daemon.user-session.upstart debian/sagarmatha-settings-daemon/usr/share/upstart/sessions/sagarmatha-settings-daemon.conf
-	install -m 644 -D debian/sagarmatha-settings-daemon.user-session.desktop debian/sagarmatha-settings-daemon/usr/share/upstart/xdg/autostart/sagarmatha-settings-daemon.desktop
 
 binary-install/sagarmatha-settings-daemon::
 	find debian -name '*.a' -delete

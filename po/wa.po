@@ -2,7 +2,7 @@
 #
 # Si vos voloz donner on côp di spale pol ratournaedje di Gnome (ou des
 # ôtes libes programes) sicrijhoz mu a l' adresse emile
-# <srtxg@chanae.alphanet.ch>; nos avons co bråmint di l' ovraedje a fé.
+# <srtxg@chanae.alphanet.ch>; nos avons co bråchitwanix di l' ovraedje a fé.
 #
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999-2002
@@ -112,7 +112,7 @@ msgstr ""
 #: ../data/apps_gnome_settings_daemon_keybindings.schemas.in.h:20
 #, fuzzy
 msgid "Eject"
-msgstr "Evenmint"
+msgstr "Evenchitwanix"
 
 #: ../data/apps_gnome_settings_daemon_keybindings.schemas.in.h:21
 #, fuzzy
@@ -149,7 +149,7 @@ msgstr "Waitroûle"
 #: ../data/apps_gnome_settings_daemon_keybindings.schemas.in.h:28
 #, fuzzy
 msgid "Log out"
-msgstr "Adjinçmint"
+msgstr "Adjinçchitwanix"
 
 #: ../data/apps_gnome_settings_daemon_keybindings.schemas.in.h:29
 msgid "Next track"
@@ -516,7 +516,7 @@ msgid ""
 "This is needed to allow changing the mouse pointer theme."
 msgstr ""
 "Dji n' a savou ahiver l' ridant «%s».\n"
-"I gn a mezåjhe del fé po permete li candjmint des cursoes."
+"I gn a mezåjhe del fé po permete li candjchitwanix des cursoes."
 
 #: ../plugins/font/gsd-font-manager.c:231
 #, c-format
@@ -525,7 +525,7 @@ msgid ""
 "This is needed to allow changing cursors."
 msgstr ""
 "Dji n' a savou ahiver l' ridant «%s».\n"
-"I gn a mezåjhe del fé po permete li candjmint des cursoes."
+"I gn a mezåjhe del fé po permete li candjchitwanix des cursoes."
 
 #: ../plugins/keybindings/gsd-keybindings-manager.c:195
 #, c-format
@@ -698,7 +698,7 @@ msgstr ""
 #: ../plugins/sound/libsounds/sound-view.c:45
 #, fuzzy
 msgid "Logout"
-msgstr "Adjinçmint"
+msgstr "Adjinçchitwanix"
 
 #: ../plugins/sound/libsounds/sound-view.c:46
 msgid "Boing"
@@ -726,7 +726,7 @@ msgstr "Son"
 #: ../plugins/sound/libsounds/sound-view.c:132
 #, fuzzy
 msgid "Sound not set for this event."
-msgstr "_Sons po ls evenmints"
+msgstr "_Sons po ls evenchitwanixs"
 
 #: ../plugins/sound/libsounds/sound-view.c:141
 msgid ""
@@ -1037,7 +1037,7 @@ msgstr "Sipepieus apontiaedjes"
 #~ msgstr "_Tårdjaedje:"
 
 #~ msgid "Delay between keypress and pointer mo_vement:"
-#~ msgstr "Tårdjaedje inte les tapes eyet pol mo_vmint do cursoe:"
+#~ msgstr "Tårdjaedje inte les tapes eyet pol mo_vchitwanix do cursoe:"
 
 #~ msgid "Filters"
 #~ msgstr "Passetes"
@@ -1353,7 +1353,7 @@ msgstr "Sipepieus apontiaedjes"
 #~ msgstr "Sicribanne"
 
 #~ msgid "Window Management"
-#~ msgstr "Manaedjmint des purneas"
+#~ msgstr "Manaedjchitwanix des purneas"
 
 #~ msgid "Action"
 #~ msgstr "Accion"
@@ -1371,7 +1371,7 @@ msgstr "Sipepieus apontiaedjes"
 #~ "%s"
 
 #~ msgid "Layout"
-#~ msgstr "Adjinçmint"
+#~ msgstr "Adjinçchitwanix"
 
 #, fuzzy
 #~ msgid "Default"
@@ -1422,7 +1422,7 @@ msgstr "Sipepieus apontiaedjes"
 
 #, fuzzy
 #~ msgid "Layouts"
-#~ msgstr "Adjinçmint"
+#~ msgstr "Adjinçchitwanix"
 
 #, fuzzy
 #~ msgid "Preview:"
@@ -1488,7 +1488,7 @@ msgstr "Sipepieus apontiaedjes"
 #, fuzzy
 #~ msgid "Large White Cursor - Current"
 #~ msgstr ""
-#~ "<b>Lådje blanc cursoe - cursoe do moumint</b>\n"
+#~ "<b>Lådje blanc cursoe - cursoe do mouchitwanix</b>\n"
 #~ "Modêye lådje do blanc cursoe"
 
 #, fuzzy
@@ -1542,7 +1542,7 @@ msgstr "Sipepieus apontiaedjes"
 #~ msgstr "Pådjes di manuel"
 
 #~ msgid "Motion"
-#~ msgstr "Movmint"
+#~ msgstr "Movchitwanix"
 
 #, fuzzy
 #~ msgid "Small"
@@ -1617,7 +1617,7 @@ msgstr "Sipepieus apontiaedjes"
 #~ msgstr "_Sicrete:"
 
 #~ msgid "Enable sound and associate sounds with events"
-#~ msgstr "Mete en alaedje les sons eyet ls assocyî avou des evenmints"
+#~ msgstr "Mete en alaedje les sons eyet ls assocyî avou des evenchitwanixs"
 
 #~ msgid "Sound Preferences"
 #~ msgstr "Preferinces pol son"
@@ -1629,7 +1629,7 @@ msgstr "Sipepieus apontiaedjes"
 #~ msgstr "Djenerå"
 
 #~ msgid "Sound Events"
-#~ msgstr "Sons po ls evenmints"
+#~ msgstr "Sons po ls evenchitwanixs"
 
 #, fuzzy
 #~ msgid "Custom theme"
@@ -1838,7 +1838,7 @@ msgstr "Sipepieus apontiaedjes"
 #~ msgstr "Sôre"
 
 #~ msgid "Event"
-#~ msgstr "Evenmint"
+#~ msgstr "Evenchitwanix"
 
 #, fuzzy
 #~ msgid "_Sounds:"

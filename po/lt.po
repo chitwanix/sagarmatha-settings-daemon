@@ -1505,7 +1505,7 @@ msgstr "Įkrova procentais:"
 #. TRANSLATORS: manufacturer
 #: ../plugins/power/gpm-common.c:469
 msgid "Vendor:"
-msgstr "Gamintojas:"
+msgstr "Gachitwanixojas:"
 
 #. TRANSLATORS: how the battery is made, e.g. Lithium Ion
 #: ../plugins/power/gpm-common.c:474
@@ -1891,12 +1891,12 @@ msgstr "Kompiuteris įkrautas"
 #. TRANSLATORS: the battery may be recalled by its vendor
 #: ../plugins/power/gsd-power-manager.c:992
 msgid "Battery may be recalled"
-msgstr "Gali būti, kad gamintojas atšaukė akumuliatorių gamybą"
+msgstr "Gali būti, kad gachitwanixojas atšaukė akumuliatorių gamybą"
 
 #: ../plugins/power/gsd-power-manager.c:995
 #, c-format
 msgid "A battery in your computer may have been recalled by %s and you may be at risk."
-msgstr "Gali būti, kad gamintojas %s atšaukė jūsų kompiuterio akumuliatorių gamybą ir jūs rizikuojate."
+msgstr "Gali būti, kad gachitwanixojas %s atšaukė jūsų kompiuterio akumuliatorių gamybą ir jūs rizikuojate."
 
 #: ../plugins/power/gsd-power-manager.c:998
 msgid "For more information visit the battery recall website."

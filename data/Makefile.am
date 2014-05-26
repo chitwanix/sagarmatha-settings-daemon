@@ -17,8 +17,7 @@ gsettings_SCHEMAS =							\
 	org.sagarmatha.settings-daemon.plugins.housekeeping.gschema.xml	\
 	org.sagarmatha.settings-daemon.plugins.print-notifications.gschema.xml	\
 	org.sagarmatha.settings-daemon.plugins.xrandr.gschema.xml		\
-	org.sagarmatha.settings-daemon.plugins.orientation.gschema.xml	\
-    org.sagarmatha.settings-daemon.plugins.background.gschema.xml
+	org.sagarmatha.settings-daemon.plugins.orientation.gschema.xml
 
 @INTLTOOL_XML_NOMERGE_RULE@
 

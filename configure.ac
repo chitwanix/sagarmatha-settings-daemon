@@ -1,7 +1,7 @@
 AC_PREREQ([2.60])
 
 AC_INIT([sagarmatha-settings-daemon],
-        [2.0.5],
+        [2.0.8],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=sagarmatha-settings-daemon])
 
 AC_CONFIG_SRCDIR([sagarmatha-settings-daemon/sagarmatha-settings-manager.c])
@@ -170,12 +170,6 @@ dnl - automount
 dnl ---------------------------------------------------------------------------
 
 PKG_CHECK_MODULES(AUTOMOUNT, x11 kbproto)
-
-dnl ---------------------------------------------------------------------------
-dnl - background
-dnl ---------------------------------------------------------------------------
-
-PKG_CHECK_MODULES(BACKGROUND, x11 sagarmatha-desktop >= $CINNAMON_DESKTOP_REQUIRED_VERSION)
 
 dnl ---------------------------------------------------------------------------
 dnl - mouse
@@ -513,7 +507,6 @@ plugins/Makefile
 plugins/a11y-keyboard/Makefile
 plugins/a11y-settings/Makefile
 plugins/automount/Makefile
-plugins/background/Makefile
 plugins/clipboard/Makefile
 plugins/color/Makefile
 plugins/common/Makefile
@@ -547,7 +540,6 @@ data/org.sagarmatha.settings-daemon.plugins.housekeeping.gschema.xml.in
 data/org.sagarmatha.settings-daemon.plugins.orientation.gschema.xml.in
 data/org.sagarmatha.settings-daemon.plugins.xrandr.gschema.xml.in
 data/org.sagarmatha.settings-daemon.plugins.print-notifications.gschema.xml.in
-data/org.sagarmatha.settings-daemon.plugins.background.gschema.xml.in
 po/Makefile.in
 man/Makefile
 ])
