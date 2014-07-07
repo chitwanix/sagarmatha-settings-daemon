@@ -32,7 +32,7 @@
 #include "sagarmatha-settings-plugin.h"
 #include "sagarmatha-settings-profile.h"
 
-#define CINNAMON_SETTINGS_PLUGIN_INFO_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), CINNAMON_TYPE_SETTINGS_PLUGIN_INFO, SagarmathaSettingsPluginInfoPrivate))
+#define SAGARMATHA_SETTINGS_PLUGIN_INFO_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SAGARMATHA_TYPE_SETTINGS_PLUGIN_INFO, SagarmathaSettingsPluginInfoPrivate))
 
 #define PLUGIN_GROUP "Sagarmatha Settings Plugin"
 
@@ -85,9 +85,9 @@ sagarmatha_settings_plugin_info_finalize (GObject *object)
         SagarmathaSettingsPluginInfo *info;
 
         g_return_if_fail (object != NULL);
-        g_return_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (object));
+        g_return_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (object));
 
-        info = CINNAMON_SETTINGS_PLUGIN_INFO (object);
+        info = SAGARMATHA_SETTINGS_PLUGIN_INFO (object);
 
         g_return_if_fail (info->priv != NULL);
 
@@ -149,7 +149,7 @@ sagarmatha_settings_plugin_info_class_init (SagarmathaSettingsPluginInfoClass *k
 static void
 sagarmatha_settings_plugin_info_init (SagarmathaSettingsPluginInfo *info)
 {
-        info->priv = CINNAMON_SETTINGS_PLUGIN_INFO_GET_PRIVATE (info);
+        info->priv = SAGARMATHA_SETTINGS_PLUGIN_INFO_GET_PRIVATE (info);
 }
 
 static void
@@ -272,7 +272,7 @@ sagarmatha_settings_plugin_info_new_from_file (const char *filename)
         SagarmathaSettingsPluginInfo *info;
         gboolean                 res;
 
-        info = g_object_new (CINNAMON_TYPE_SETTINGS_PLUGIN_INFO, NULL);
+        info = g_object_new (SAGARMATHA_TYPE_SETTINGS_PLUGIN_INFO, NULL);
 
         res = sagarmatha_settings_plugin_info_fill_from_file (info, filename);
         if (! res) {
@@ -325,7 +325,7 @@ _deactivate_plugin (SagarmathaSettingsPluginInfo *info)
 gboolean
 sagarmatha_settings_plugin_info_deactivate (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
 
         if (!info->priv->active || !info->priv->available) {
                 return TRUE;
@@ -349,7 +349,7 @@ load_plugin_module (SagarmathaSettingsPluginInfo *info)
 
         ret = FALSE;
 
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
         g_return_val_if_fail (info->priv->file != NULL, FALSE);
         g_return_val_if_fail (info->priv->location != NULL, FALSE);
         g_return_val_if_fail (info->priv->plugin == NULL, FALSE);
@@ -370,7 +370,7 @@ load_plugin_module (SagarmathaSettingsPluginInfo *info)
         if (!g_type_module_use (info->priv->module)) {
                 g_warning ("Cannot load plugin '%s' since file '%s' cannot be read.",
                            info->priv->name,
-                           sagarmatha_settings_module_get_path (CINNAMON_SETTINGS_MODULE (info->priv->module)));
+                           sagarmatha_settings_module_get_path (SAGARMATHA_SETTINGS_MODULE (info->priv->module)));
 
                 g_object_unref (G_OBJECT (info->priv->module));
                 info->priv->module = NULL;
@@ -381,7 +381,7 @@ load_plugin_module (SagarmathaSettingsPluginInfo *info)
                 goto out;
         }
 
-        info->priv->plugin = CINNAMON_SETTINGS_PLUGIN (sagarmatha_settings_module_new_object (CINNAMON_SETTINGS_MODULE (info->priv->module)));
+        info->priv->plugin = SAGARMATHA_SETTINGS_PLUGIN (sagarmatha_settings_module_new_object (SAGARMATHA_SETTINGS_MODULE (info->priv->module)));
 
         g_type_module_unuse (info->priv->module);
         ret = TRUE;
@@ -418,7 +418,7 @@ gboolean
 sagarmatha_settings_plugin_info_activate (SagarmathaSettingsPluginInfo *info)
 {
 
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
 
         if (! info->priv->available) {
                 return FALSE;
@@ -439,7 +439,7 @@ sagarmatha_settings_plugin_info_activate (SagarmathaSettingsPluginInfo *info)
 gboolean
 sagarmatha_settings_plugin_info_is_active (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
 
         return (info->priv->available && info->priv->active);
 }
@@ -447,7 +447,7 @@ sagarmatha_settings_plugin_info_is_active (SagarmathaSettingsPluginInfo *info)
 gboolean
 sagarmatha_settings_plugin_info_get_enabled (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
 
         return (info->priv->enabled);
 }
@@ -455,7 +455,7 @@ sagarmatha_settings_plugin_info_get_enabled (SagarmathaSettingsPluginInfo *info)
 gboolean
 sagarmatha_settings_plugin_info_is_available (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), FALSE);
 
         return (info->priv->available != FALSE);
 }
@@ -463,7 +463,7 @@ sagarmatha_settings_plugin_info_is_available (SagarmathaSettingsPluginInfo *info
 const char *
 sagarmatha_settings_plugin_info_get_name (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), NULL);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), NULL);
 
         return info->priv->name;
 }
@@ -471,7 +471,7 @@ sagarmatha_settings_plugin_info_get_name (SagarmathaSettingsPluginInfo *info)
 const char *
 sagarmatha_settings_plugin_info_get_description (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), NULL);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), NULL);
 
         return info->priv->desc;
 }
@@ -479,7 +479,7 @@ sagarmatha_settings_plugin_info_get_description (SagarmathaSettingsPluginInfo *i
 const char **
 sagarmatha_settings_plugin_info_get_authors (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), (const char **)NULL);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), (const char **)NULL);
 
         return (const char **)info->priv->authors;
 }
@@ -487,7 +487,7 @@ sagarmatha_settings_plugin_info_get_authors (SagarmathaSettingsPluginInfo *info)
 const char *
 sagarmatha_settings_plugin_info_get_website (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), NULL);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), NULL);
 
         return info->priv->website;
 }
@@ -495,7 +495,7 @@ sagarmatha_settings_plugin_info_get_website (SagarmathaSettingsPluginInfo *info)
 const char *
 sagarmatha_settings_plugin_info_get_copyright (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), NULL);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), NULL);
 
         return info->priv->copyright;
 }
@@ -504,7 +504,7 @@ sagarmatha_settings_plugin_info_get_copyright (SagarmathaSettingsPluginInfo *inf
 const char *
 sagarmatha_settings_plugin_info_get_location (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), NULL);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), NULL);
 
         return info->priv->location;
 }
@@ -512,7 +512,7 @@ sagarmatha_settings_plugin_info_get_location (SagarmathaSettingsPluginInfo *info
 int
 sagarmatha_settings_plugin_info_get_priority (SagarmathaSettingsPluginInfo *info)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info), PLUGIN_PRIORITY_DEFAULT);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info), PLUGIN_PRIORITY_DEFAULT);
 
         return info->priv->priority;
 }
@@ -521,7 +521,7 @@ void
 sagarmatha_settings_plugin_info_set_priority (SagarmathaSettingsPluginInfo *info,
                                          int                      priority)
 {
-        g_return_if_fail (CINNAMON_IS_SETTINGS_PLUGIN_INFO (info));
+        g_return_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN_INFO (info));
 
         info->priv->priority = priority;
 }

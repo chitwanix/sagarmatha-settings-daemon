@@ -45,7 +45,7 @@
 #include "xsettings-manager.h"
 #include "fontconfig-monitor.h"
 
-#define CINNAMON_XSETTINGS_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), CINNAMON_TYPE_XSETTINGS_MANAGER, SagarmathaSettingsXSettingsManagerPrivate))
+#define SAGARMATHA_XSETTINGS_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SAGARMATHA_TYPE_XSETTINGS_MANAGER, SagarmathaSettingsXSettingsManagerPrivate))
 
 #define MOUSE_SETTINGS_SCHEMA     "org.sagarmatha.settings-daemon.peripherals.mouse"
 #define INTERFACE_SETTINGS_SCHEMA "org.sagarmatha.desktop.interface"
@@ -946,7 +946,7 @@ sagarmatha_xsettings_manager_constructor (GType                  type,
 {
         SagarmathaSettingsXSettingsManager      *xsettings_manager;
 
-        xsettings_manager = CINNAMON_XSETTINGS_MANAGER (G_OBJECT_CLASS (sagarmatha_xsettings_manager_parent_class)->constructor (type,
+        xsettings_manager = SAGARMATHA_XSETTINGS_MANAGER (G_OBJECT_CLASS (sagarmatha_xsettings_manager_parent_class)->constructor (type,
                                                                                                                   n_construct_properties,
                                                                                                                   construct_properties));
 
@@ -967,7 +967,7 @@ sagarmatha_xsettings_manager_class_init (SagarmathaSettingsXSettingsManagerClass
 static void
 sagarmatha_xsettings_manager_init (SagarmathaSettingsXSettingsManager *manager)
 {
-        manager->priv = CINNAMON_XSETTINGS_MANAGER_GET_PRIVATE (manager);
+        manager->priv = SAGARMATHA_XSETTINGS_MANAGER_GET_PRIVATE (manager);
 }
 
 static void
@@ -976,9 +976,9 @@ sagarmatha_xsettings_manager_finalize (GObject *object)
         SagarmathaSettingsXSettingsManager *xsettings_manager;
 
         g_return_if_fail (object != NULL);
-        g_return_if_fail (CINNAMON_IS_XSETTINGS_MANAGER (object));
+        g_return_if_fail (SAGARMATHA_IS_XSETTINGS_MANAGER (object));
 
-        xsettings_manager = CINNAMON_XSETTINGS_MANAGER (object);
+        xsettings_manager = SAGARMATHA_XSETTINGS_MANAGER (object);
 
         g_return_if_fail (xsettings_manager->priv != NULL);
 
@@ -994,10 +994,10 @@ sagarmatha_xsettings_manager_new (void)
         if (manager_object != NULL) {
                 g_object_ref (manager_object);
         } else {
-                manager_object = g_object_new (CINNAMON_TYPE_XSETTINGS_MANAGER, NULL);
+                manager_object = g_object_new (SAGARMATHA_TYPE_XSETTINGS_MANAGER, NULL);
                 g_object_add_weak_pointer (manager_object,
                                            (gpointer *) &manager_object);
         }
 
-        return CINNAMON_XSETTINGS_MANAGER (manager_object);
+        return SAGARMATHA_XSETTINGS_MANAGER (manager_object);
 }

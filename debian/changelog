@@ -1,6 +1,11 @@
-sagarmatha-settings-daemon (1.0.0) khukuri; urgency=low
+sagarmatha-settings-daemon (1.0.1) khukuri; urgency=low
 
-  * 1.0.0 Initial Port from sagarmatha-settings-daemon 2.0.8
+  * 1.0.1
 
  -- Arun Kr. Pyasi <root@chitwanix.com>  Mon, 25 Nov 2013 18:39:05 +0000
 
+sagarmatha-settings-daemon (1.0.0) khukuri; urgency=low
+
+  * 1.0.0 initial import from cinnamon-mint+petra
+
+ -- Arun Kr. Pyasi <root@chitwanix.com>  Thu, 07 Nov 2013 10:28:55 +0000

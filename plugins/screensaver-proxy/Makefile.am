@@ -10,7 +10,7 @@ libscreensaver_proxy_la_SOURCES =	\
 
 libscreensaver_proxy_la_CPPFLAGS =				\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	$(AM_CPPFLAGS)
 
 libscreensaver_proxy_la_CFLAGS =	\
@@ -33,7 +33,7 @@ csd_test_screensaver_proxy_CPPFLAGS =					\
 	-I$(top_srcdir)/data/					\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-I$(top_srcdir)/plugins/common				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	-DLIBEXECDIR=\""$(libexecdir)"\"			\
 	$(AM_CPPFLAGS)
 

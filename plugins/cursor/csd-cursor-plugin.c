@@ -33,7 +33,7 @@ struct CsdCursorPluginPrivate {
 
 #define CSD_CURSOR_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_CURSOR_PLUGIN, CsdCursorPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdCursorPlugin, csd_cursor_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdCursorPlugin, csd_cursor_plugin)
 
 static void
 csd_cursor_plugin_init (CsdCursorPlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_cursor_plugin_class_init (CsdCursorPluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_cursor_plugin_finalize;
 

@@ -33,9 +33,9 @@ G_BEGIN_DECLS
 #define GPM_IS_PHONE_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), GPM_TYPE_PHONE))
 #define GPM_PHONE_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), GPM_TYPE_PHONE, GpmPhoneClass))
 
-#define CINNAMON_PHONE_MANAGER_DBUS_SERVICE        "org.sagarmatha.phone"
-#define CINNAMON_PHONE_MANAGER_DBUS_PATH           "/org/sagarmatha/phone/Manager"
-#define CINNAMON_PHONE_MANAGER_DBUS_INTERFACE      "org.sagarmatha.phone.Manager"
+#define SAGARMATHA_PHONE_MANAGER_DBUS_SERVICE        "org.sagarmatha.phone"
+#define SAGARMATHA_PHONE_MANAGER_DBUS_PATH           "/org/sagarmatha/phone/Manager"
+#define SAGARMATHA_PHONE_MANAGER_DBUS_INTERFACE      "org.sagarmatha.phone.Manager"
 
 typedef struct GpmPhonePrivate GpmPhonePrivate;
 

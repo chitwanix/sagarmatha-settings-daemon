@@ -20,8 +20,8 @@
  *
  */
 
-#ifndef __CINNAMON_SETTINGS_PROFILE_H
-#define __CINNAMON_SETTINGS_PROFILE_H
+#ifndef __SAGARMATHA_SETTINGS_PROFILE_H
+#define __SAGARMATHA_SETTINGS_PROFILE_H
 
 #include <glib.h>
 
@@ -50,4 +50,4 @@ void            _sagarmatha_settings_profile_log    (const char *func,
 
 G_END_DECLS
 
-#endif /* __CINNAMON_SETTINGS_PROFILE_H */
+#endif /* __SAGARMATHA_SETTINGS_PROFILE_H */

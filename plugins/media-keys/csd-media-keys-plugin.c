@@ -33,7 +33,7 @@ struct CsdMediaKeysPluginPrivate {
 
 #define CSD_MEDIA_KEYS_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_MEDIA_KEYS_PLUGIN, CsdMediaKeysPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdMediaKeysPlugin, csd_media_keys_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdMediaKeysPlugin, csd_media_keys_plugin)
 
 static void
 csd_media_keys_plugin_init (CsdMediaKeysPlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_media_keys_plugin_class_init (CsdMediaKeysPluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_media_keys_plugin_finalize;
 

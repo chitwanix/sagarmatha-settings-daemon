@@ -2273,8 +2273,8 @@ gcm_session_active_changed_cb (SagarmathaSettingsSession *session,
          * and we want to avoid reprobing the devices for that.
          */
         state_new = sagarmatha_settings_session_get_state (session);
-        if (priv->session_state != CINNAMON_SETTINGS_SESSION_STATE_UNKNOWN &&
-            state_new == CINNAMON_SETTINGS_SESSION_STATE_ACTIVE) {
+        if (priv->session_state != SAGARMATHA_SETTINGS_SESSION_STATE_UNKNOWN &&
+            state_new == SAGARMATHA_SETTINGS_SESSION_STATE_ACTIVE) {
                 g_debug ("Done switch to new account, reload devices");
                 cd_client_get_devices (manager->priv->client, NULL,
                                        gcm_session_get_devices_cb,

@@ -33,7 +33,7 @@ struct CsdA11ySettingsPluginPrivate {
 
 #define CSD_A11Y_SETTINGS_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_A11Y_SETTINGS_PLUGIN, CsdA11ySettingsPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdA11ySettingsPlugin, csd_a11y_settings_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdA11ySettingsPlugin, csd_a11y_settings_plugin)
 
 static void
 csd_a11y_settings_plugin_init (CsdA11ySettingsPlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_a11y_settings_plugin_class_init (CsdA11ySettingsPluginClass *klass)
 {
         GObjectClass             *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_a11y_settings_plugin_finalize;
 

@@ -2,9 +2,9 @@ NULL =
 
 INCLUDES = \
 	-DDATADIR=\""$(datadir)"\"				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	-DLIBEXECDIR=\""$(libexecdir)"\" 			\
-	-DCINNAMON_SETTINGS_PLUGINDIR=\""$(plugindir)"\"		\
+	-DSAGARMATHA_SETTINGS_PLUGINDIR=\""$(plugindir)"\"		\
 	$(WARN_CFLAGS)						\
 	$(DISABLE_DEPRECATED_CFLAGS)				\
 	$(SETTINGS_DAEMON_CFLAGS)				\

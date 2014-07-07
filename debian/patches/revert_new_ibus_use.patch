@@ -3383,7 +3383,7 @@ Index: sagarmatha-settings-daemon-3.6.4/plugins/keyboard/Makefile.am
 -	-I$(top_srcdir)/plugins/common			\
  	-DDATADIR=\""$(pkgdatadir)"\"			\
 -	-DLIBEXECDIR=\""$(libexecdir)"\"		\
- 	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+ 	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
  	$(AM_CPPFLAGS)
  
  libkeyboard_la_CFLAGS = \
@@ -3711,7 +3711,7 @@ Index: sagarmatha-settings-daemon-3.6.4/plugins/keyboard/Makefile.in
 -	-I$(top_srcdir)/plugins/common			\
  	-DDATADIR=\""$(pkgdatadir)"\"			\
 -	-DLIBEXECDIR=\""$(libexecdir)"\"		\
- 	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+ 	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
  	$(AM_CPPFLAGS)
  
 @@ -462,50 +378,16 @@

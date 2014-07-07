@@ -33,7 +33,7 @@ struct CsdDummyPluginPrivate {
 
 #define CSD_DUMMY_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_DUMMY_PLUGIN, CsdDummyPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdDummyPlugin, csd_dummy_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdDummyPlugin, csd_dummy_plugin)
 
 static void
 csd_dummy_plugin_init (CsdDummyPlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_dummy_plugin_class_init (CsdDummyPluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_dummy_plugin_finalize;
 

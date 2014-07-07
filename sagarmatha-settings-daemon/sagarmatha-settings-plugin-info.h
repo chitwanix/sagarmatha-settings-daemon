@@ -18,19 +18,19 @@
  * Boston, MA 02110-1335, USA.
  */
 
-#ifndef __CINNAMON_SETTINGS_PLUGIN_INFO_H__
-#define __CINNAMON_SETTINGS_PLUGIN_INFO_H__
+#ifndef __SAGARMATHA_SETTINGS_PLUGIN_INFO_H__
+#define __SAGARMATHA_SETTINGS_PLUGIN_INFO_H__
 
 #include <glib-object.h>
 #include <gmodule.h>
 
 G_BEGIN_DECLS
-#define CINNAMON_TYPE_SETTINGS_PLUGIN_INFO              (sagarmatha_settings_plugin_info_get_type())
-#define CINNAMON_SETTINGS_PLUGIN_INFO(obj)              (G_TYPE_CHECK_INSTANCE_CAST((obj), CINNAMON_TYPE_SETTINGS_PLUGIN_INFO, SagarmathaSettingsPluginInfo))
-#define CINNAMON_SETTINGS_PLUGIN_INFO_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST((klass),  CINNAMON_TYPE_SETTINGS_PLUGIN_INFO, SagarmathaSettingsPluginInfoClass))
-#define CINNAMON_IS_SETTINGS_PLUGIN_INFO(obj)           (G_TYPE_CHECK_INSTANCE_TYPE((obj), CINNAMON_TYPE_SETTINGS_PLUGIN_INFO))
-#define CINNAMON_IS_SETTINGS_PLUGIN_INFO_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), CINNAMON_TYPE_SETTINGS_PLUGIN_INFO))
-#define CINNAMON_SETTINGS_PLUGIN_INFO_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS((obj),  CINNAMON_TYPE_SETTINGS_PLUGIN_INFO, SagarmathaSettingsPluginInfoClass))
+#define SAGARMATHA_TYPE_SETTINGS_PLUGIN_INFO              (sagarmatha_settings_plugin_info_get_type())
+#define SAGARMATHA_SETTINGS_PLUGIN_INFO(obj)              (G_TYPE_CHECK_INSTANCE_CAST((obj), SAGARMATHA_TYPE_SETTINGS_PLUGIN_INFO, SagarmathaSettingsPluginInfo))
+#define SAGARMATHA_SETTINGS_PLUGIN_INFO_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST((klass),  SAGARMATHA_TYPE_SETTINGS_PLUGIN_INFO, SagarmathaSettingsPluginInfoClass))
+#define SAGARMATHA_IS_SETTINGS_PLUGIN_INFO(obj)           (G_TYPE_CHECK_INSTANCE_TYPE((obj), SAGARMATHA_TYPE_SETTINGS_PLUGIN_INFO))
+#define SAGARMATHA_IS_SETTINGS_PLUGIN_INFO_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), SAGARMATHA_TYPE_SETTINGS_PLUGIN_INFO))
+#define SAGARMATHA_SETTINGS_PLUGIN_INFO_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS((obj),  SAGARMATHA_TYPE_SETTINGS_PLUGIN_INFO, SagarmathaSettingsPluginInfoClass))
 
 typedef struct SagarmathaSettingsPluginInfoPrivate SagarmathaSettingsPluginInfoPrivate;
 
@@ -73,4 +73,4 @@ void             sagarmatha_settings_plugin_info_set_priority    (SagarmathaSett
 
 G_END_DECLS
 
-#endif  /* __CINNAMON_SETTINGS_PLUGIN_INFO_H__ */
+#endif  /* __SAGARMATHA_SETTINGS_PLUGIN_INFO_H__ */

@@ -33,7 +33,7 @@ struct CsdClipboardPluginPrivate {
 
 #define CSD_CLIPBOARD_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_CLIPBOARD_PLUGIN, CsdClipboardPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdClipboardPlugin, csd_clipboard_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdClipboardPlugin, csd_clipboard_plugin)
 
 static void
 csd_clipboard_plugin_init (CsdClipboardPlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_clipboard_plugin_class_init (CsdClipboardPluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_clipboard_plugin_finalize;
 

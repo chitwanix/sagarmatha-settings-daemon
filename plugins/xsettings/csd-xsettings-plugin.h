@@ -18,8 +18,8 @@
  *
  */
 
-#ifndef __CINNAMON_XSETTINGS_PLUGIN_H__
-#define __CINNAMON_XSETTINGS_PLUGIN_H__
+#ifndef __SAGARMATHA_XSETTINGS_PLUGIN_H__
+#define __SAGARMATHA_XSETTINGS_PLUGIN_H__
 
 #include <glib.h>
 #include <glib-object.h>
@@ -29,12 +29,12 @@
 
 G_BEGIN_DECLS
 
-#define CINNAMON_TYPE_XSETTINGS_PLUGIN                (sagarmatha_xsettings_plugin_get_type ())
-#define CINNAMON_XSETTINGS_PLUGIN(o)                  (G_TYPE_CHECK_INSTANCE_CAST ((o), CINNAMON_TYPE_XSETTINGS_PLUGIN, SagarmathaSettingsXSettingsPlugin))
-#define CINNAMON_XSETTINGS_PLUGIN_CLASS(k)            (G_TYPE_CHECK_CLASS_CAST((k), CINNAMON_TYPE_XSETTINGS_PLUGIN, SagarmathaSettingsXSettingsPluginClass))
-#define CINNAMON_IS_XSETTINGS_PLUGIN(o)               (G_TYPE_CHECK_INSTANCE_TYPE ((o), CINNAMON_TYPE_XSETTINGS_PLUGIN))
-#define CINNAMON_IS_XSETTINGS_PLUGIN_CLASS(k)         (G_TYPE_CHECK_CLASS_TYPE ((k), CINNAMON_TYPE_XSETTINGS_PLUGIN))
-#define CINNAMON_XSETTINGS_PLUGIN_GET_CLASS(o)        (G_TYPE_INSTANCE_GET_CLASS ((o), CINNAMON_TYPE_XSETTINGS_PLUGIN, SagarmathaSettingsXSettingsPluginClass))
+#define SAGARMATHA_TYPE_XSETTINGS_PLUGIN                (sagarmatha_xsettings_plugin_get_type ())
+#define SAGARMATHA_XSETTINGS_PLUGIN(o)                  (G_TYPE_CHECK_INSTANCE_CAST ((o), SAGARMATHA_TYPE_XSETTINGS_PLUGIN, SagarmathaSettingsXSettingsPlugin))
+#define SAGARMATHA_XSETTINGS_PLUGIN_CLASS(k)            (G_TYPE_CHECK_CLASS_CAST((k), SAGARMATHA_TYPE_XSETTINGS_PLUGIN, SagarmathaSettingsXSettingsPluginClass))
+#define SAGARMATHA_IS_XSETTINGS_PLUGIN(o)               (G_TYPE_CHECK_INSTANCE_TYPE ((o), SAGARMATHA_TYPE_XSETTINGS_PLUGIN))
+#define SAGARMATHA_IS_XSETTINGS_PLUGIN_CLASS(k)         (G_TYPE_CHECK_CLASS_TYPE ((k), SAGARMATHA_TYPE_XSETTINGS_PLUGIN))
+#define SAGARMATHA_XSETTINGS_PLUGIN_GET_CLASS(o)        (G_TYPE_INSTANCE_GET_CLASS ((o), SAGARMATHA_TYPE_XSETTINGS_PLUGIN, SagarmathaSettingsXSettingsPluginClass))
 
 typedef struct SagarmathaSettingsXSettingsPluginPrivate SagarmathaSettingsXSettingsPluginPrivate;
 
@@ -56,4 +56,4 @@ G_MODULE_EXPORT GType register_sagarmatha_settings_plugin (GTypeModule *module);
 
 G_END_DECLS
 
-#endif /* __CINNAMON_XSETTINGS_PLUGIN_H__ */
+#endif /* __SAGARMATHA_XSETTINGS_PLUGIN_H__ */

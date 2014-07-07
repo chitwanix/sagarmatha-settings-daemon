@@ -33,7 +33,7 @@ struct CsdScreensaverProxyPluginPrivate {
 
 #define CSD_SCREENSAVER_PROXY_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_SCREENSAVER_PROXY_PLUGIN, CsdScreensaverProxyPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdScreensaverProxyPlugin, csd_screensaver_proxy_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdScreensaverProxyPlugin, csd_screensaver_proxy_plugin)
 
 static void
 csd_screensaver_proxy_plugin_init (CsdScreensaverProxyPlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_screensaver_proxy_plugin_class_init (CsdScreensaverProxyPluginClass *klass)
 {
         GObjectClass             *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_screensaver_proxy_plugin_finalize;
 

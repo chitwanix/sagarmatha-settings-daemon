@@ -22,7 +22,7 @@ test_gtk_modules_LDADD =					\
 test_gtk_modules_CPPFLAGS =				\
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
 	-I$(top_srcdir)/data/				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	-DGTK_MODULES_DIRECTORY=\""$(libdir)/sagarmatha-settings-daemon-@CSD_API_VERSION@/gtk-modules/"\" \
 	$(AM_CPPFLAGS)
 
@@ -67,7 +67,7 @@ libxsettings_la_SOURCES = 	\
 libxsettings_la_CPPFLAGS =					\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-I$(top_srcdir)/data/					\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	-DGTK_MODULES_DIRECTORY=\""$(libdir)/sagarmatha-settings-daemon-@CSD_API_VERSION@/gtk-modules/"\" \
 	$(AM_CPPFLAGS)
 

@@ -44,7 +44,7 @@
 
 #define PLUGIN_EXT ".sagarmatha-settings-plugin"
 
-#define CINNAMON_SETTINGS_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), CINNAMON_TYPE_SETTINGS_MANAGER, SagarmathaSettingsManagerPrivate))
+#define SAGARMATHA_SETTINGS_MANAGER_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SAGARMATHA_TYPE_SETTINGS_MANAGER, SagarmathaSettingsManagerPrivate))
 
 static const gchar introspection_xml[] =
 "<node name='/org/sagarmatha/SettingsDaemon'>"
@@ -298,7 +298,7 @@ _load_all (SagarmathaSettingsManager *manager)
         sagarmatha_settings_profile_start (NULL);
 
         /* load system plugins */
-        _load_dir (manager, CINNAMON_SETTINGS_PLUGINDIR G_DIR_SEPARATOR_S);
+        _load_dir (manager, SAGARMATHA_SETTINGS_PLUGINDIR G_DIR_SEPARATOR_S);
 
         manager->priv->plugins = g_slist_sort (manager->priv->plugins, (GCompareFunc) compare_priority);
         g_slist_foreach (manager->priv->plugins, (GFunc) maybe_activate_plugin, NULL);
@@ -374,8 +374,8 @@ sagarmatha_settings_manager_start (SagarmathaSettingsManager *manager,
         if (!g_module_supported ()) {
                 g_warning ("sagarmatha-settings-daemon is not able to initialize the plugins.");
                 g_set_error (error,
-                             CINNAMON_SETTINGS_MANAGER_ERROR,
-                             CINNAMON_SETTINGS_MANAGER_ERROR_GENERAL,
+                             SAGARMATHA_SETTINGS_MANAGER_ERROR,
+                             SAGARMATHA_SETTINGS_MANAGER_ERROR_GENERAL,
                              "Plugins not supported");
 
                 goto out;
@@ -425,7 +425,7 @@ sagarmatha_settings_manager_dispose (GObject *object)
 {
         SagarmathaSettingsManager *manager;
 
-        manager = CINNAMON_SETTINGS_MANAGER (object);
+        manager = SAGARMATHA_SETTINGS_MANAGER (object);
 
         sagarmatha_settings_manager_stop (manager);
 
@@ -447,7 +447,7 @@ static void
 sagarmatha_settings_manager_init (SagarmathaSettingsManager *manager)
 {
 
-        manager->priv = CINNAMON_SETTINGS_MANAGER_GET_PRIVATE (manager);
+        manager->priv = SAGARMATHA_SETTINGS_MANAGER_GET_PRIVATE (manager);
 }
 
 static void
@@ -456,9 +456,9 @@ sagarmatha_settings_manager_finalize (GObject *object)
         SagarmathaSettingsManager *manager;
 
         g_return_if_fail (object != NULL);
-        g_return_if_fail (CINNAMON_IS_SETTINGS_MANAGER (object));
+        g_return_if_fail (SAGARMATHA_IS_SETTINGS_MANAGER (object));
 
-        manager = CINNAMON_SETTINGS_MANAGER (object);
+        manager = SAGARMATHA_SETTINGS_MANAGER (object);
 
         g_return_if_fail (manager->priv != NULL);
 
@@ -471,12 +471,12 @@ sagarmatha_settings_manager_new (void)
         if (manager_object != NULL) {
                 g_object_ref (manager_object);
         } else {
-                manager_object = g_object_new (CINNAMON_TYPE_SETTINGS_MANAGER,
+                manager_object = g_object_new (SAGARMATHA_TYPE_SETTINGS_MANAGER,
                                                NULL);
                 g_object_add_weak_pointer (manager_object,
                                            (gpointer *) &manager_object);
                 register_manager (manager_object);
         }
 
-        return CINNAMON_SETTINGS_MANAGER (manager_object);
+        return SAGARMATHA_SETTINGS_MANAGER (manager_object);
 }

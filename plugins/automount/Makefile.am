@@ -9,7 +9,7 @@ sagarmatha_fallback_mount_helper_SOURCES = \
 
 sagarmatha_fallback_mount_helper_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	$(AM_CPPFLAGS)
 
 sagarmatha_fallback_mount_helper_CFLAGS =	\

@@ -33,7 +33,7 @@ struct CsdMousePluginPrivate {
 
 #define CSD_MOUSE_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_MOUSE_PLUGIN, CsdMousePluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdMousePlugin, csd_mouse_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdMousePlugin, csd_mouse_plugin)
 
 static void
 csd_mouse_plugin_init (CsdMousePlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_mouse_plugin_class_init (CsdMousePluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_mouse_plugin_finalize;
 

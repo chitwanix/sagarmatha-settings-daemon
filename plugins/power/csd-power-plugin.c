@@ -33,7 +33,7 @@ struct CsdPowerPluginPrivate {
 
 #define CSD_POWER_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_POWER_PLUGIN, CsdPowerPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdPowerPlugin, csd_power_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdPowerPlugin, csd_power_plugin)
 
 static void
 csd_power_plugin_init (CsdPowerPlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_power_plugin_class_init (CsdPowerPluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_power_plugin_finalize;
 

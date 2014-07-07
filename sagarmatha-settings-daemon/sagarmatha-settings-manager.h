@@ -18,19 +18,19 @@
  *
  */
 
-#ifndef __CINNAMON_SETTINGS_MANAGER_H
-#define __CINNAMON_SETTINGS_MANAGER_H
+#ifndef __SAGARMATHA_SETTINGS_MANAGER_H
+#define __SAGARMATHA_SETTINGS_MANAGER_H
 
 #include <glib-object.h>
 
 G_BEGIN_DECLS
 
-#define CINNAMON_TYPE_SETTINGS_MANAGER         (sagarmatha_settings_manager_get_type ())
-#define CINNAMON_SETTINGS_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), CINNAMON_TYPE_SETTINGS_MANAGER, SagarmathaSettingsManager))
-#define CINNAMON_SETTINGS_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), CINNAMON_TYPE_SETTINGS_MANAGER, SagarmathaSettingsManagerClass))
-#define CINNAMON_IS_SETTINGS_MANAGER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), CINNAMON_TYPE_SETTINGS_MANAGER))
-#define CINNAMON_IS_SETTINGS_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), CINNAMON_TYPE_SETTINGS_MANAGER))
-#define CINNAMON_SETTINGS_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), CINNAMON_TYPE_SETTINGS_MANAGER, SagarmathaSettingsManagerClass))
+#define SAGARMATHA_TYPE_SETTINGS_MANAGER         (sagarmatha_settings_manager_get_type ())
+#define SAGARMATHA_SETTINGS_MANAGER(o)           (G_TYPE_CHECK_INSTANCE_CAST ((o), SAGARMATHA_TYPE_SETTINGS_MANAGER, SagarmathaSettingsManager))
+#define SAGARMATHA_SETTINGS_MANAGER_CLASS(k)     (G_TYPE_CHECK_CLASS_CAST((k), SAGARMATHA_TYPE_SETTINGS_MANAGER, SagarmathaSettingsManagerClass))
+#define SAGARMATHA_IS_SETTINGS_MANAGER(o)        (G_TYPE_CHECK_INSTANCE_TYPE ((o), SAGARMATHA_TYPE_SETTINGS_MANAGER))
+#define SAGARMATHA_IS_SETTINGS_MANAGER_CLASS(k)  (G_TYPE_CHECK_CLASS_TYPE ((k), SAGARMATHA_TYPE_SETTINGS_MANAGER))
+#define SAGARMATHA_SETTINGS_MANAGER_GET_CLASS(o) (G_TYPE_INSTANCE_GET_CLASS ((o), SAGARMATHA_TYPE_SETTINGS_MANAGER, SagarmathaSettingsManagerClass))
 
 typedef struct SagarmathaSettingsManagerPrivate SagarmathaSettingsManagerPrivate;
 
@@ -52,10 +52,10 @@ typedef struct
 
 typedef enum
 {
-        CINNAMON_SETTINGS_MANAGER_ERROR_GENERAL
+        SAGARMATHA_SETTINGS_MANAGER_ERROR_GENERAL
 } SagarmathaSettingsManagerError;
 
-#define CINNAMON_SETTINGS_MANAGER_ERROR sagarmatha_settings_manager_error_quark ()
+#define SAGARMATHA_SETTINGS_MANAGER_ERROR sagarmatha_settings_manager_error_quark ()
 
 GQuark                 sagarmatha_settings_manager_error_quark         (void);
 GType                  sagarmatha_settings_manager_get_type   (void);
@@ -67,4 +67,4 @@ void                   sagarmatha_settings_manager_stop       (SagarmathaSetting
 
 G_END_DECLS
 
-#endif /* __CINNAMON_SETTINGS_MANAGER_H */
+#endif /* __SAGARMATHA_SETTINGS_MANAGER_H */

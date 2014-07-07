@@ -14,7 +14,7 @@ csd_test_smartcard_CFLAGS =					\
 	-I$(top_srcdir)/plugins/common				\
 	-DSYSCONFDIR=\""$(sysconfdir)"\" \
 	-DLIBDIR=\""$(libdir)"\" \
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	$(NSS_CFLAGS)						\
 	$(PLUGIN_CFLAGS)					\
 	$(SETTINGS_PLUGIN_CFLAGS)				\
@@ -39,7 +39,7 @@ libsmartcard_la_SOURCES = \
 
 libsmartcard_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon \
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	-DSYSCONFDIR=\""$(sysconfdir)"\" \
 	-DLIBDIR=\""$(libdir)"\" \
 	-DCSD_SMARTCARD_MANAGER_NSS_DB=\""$(NSS_DATABASE)"\" \

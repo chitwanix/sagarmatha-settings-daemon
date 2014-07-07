@@ -12,7 +12,7 @@ libcursor_la_SOURCES =		\
 libcursor_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-I$(top_srcdir)/plugins/common/				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	$(AM_CPPFLAGS)
 
 libcursor_la_CFLAGS = \

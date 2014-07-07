@@ -33,7 +33,7 @@ struct CsdKeyboardPluginPrivate {
 
 #define CSD_KEYBOARD_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_KEYBOARD_PLUGIN, CsdKeyboardPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdKeyboardPlugin, csd_keyboard_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdKeyboardPlugin, csd_keyboard_plugin)
 
 static void
 csd_keyboard_plugin_init (CsdKeyboardPlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_keyboard_plugin_class_init (CsdKeyboardPluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_keyboard_plugin_finalize;
 

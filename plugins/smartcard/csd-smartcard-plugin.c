@@ -58,7 +58,7 @@ typedef enum
 
 #define CSD_SMARTCARD_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_SMARTCARD_PLUGIN, CsdSmartcardPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdSmartcardPlugin, csd_smartcard_plugin);
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdSmartcardPlugin, csd_smartcard_plugin);
 
 static void
 simulate_user_activity (CsdSmartcardPlugin *plugin)
@@ -333,7 +333,7 @@ static void
 csd_smartcard_plugin_class_init (CsdSmartcardPluginClass *klass)
 {
         GObjectClass *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_smartcard_plugin_finalize;
 

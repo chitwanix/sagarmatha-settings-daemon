@@ -31,14 +31,14 @@ struct SagarmathaSettingsXSettingsPluginPrivate {
         SagarmathaSettingsXSettingsManager *manager;
 };
 
-#define CINNAMON_XSETTINGS_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CINNAMON_TYPE_XSETTINGS_PLUGIN, SagarmathaSettingsXSettingsPluginPrivate))
+#define SAGARMATHA_XSETTINGS_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), SAGARMATHA_TYPE_XSETTINGS_PLUGIN, SagarmathaSettingsXSettingsPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (SagarmathaSettingsXSettingsPlugin, sagarmatha_xsettings_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (SagarmathaSettingsXSettingsPlugin, sagarmatha_xsettings_plugin)
 
 static void
 sagarmatha_xsettings_plugin_init (SagarmathaSettingsXSettingsPlugin *plugin)
 {
-        plugin->priv = CINNAMON_XSETTINGS_PLUGIN_GET_PRIVATE (plugin);
+        plugin->priv = SAGARMATHA_XSETTINGS_PLUGIN_GET_PRIVATE (plugin);
 
         g_debug ("SagarmathaSettingsXSettingsPlugin initializing");
 
@@ -51,11 +51,11 @@ sagarmatha_xsettings_plugin_finalize (GObject *object)
         SagarmathaSettingsXSettingsPlugin *plugin;
 
         g_return_if_fail (object != NULL);
-        g_return_if_fail (CINNAMON_IS_XSETTINGS_PLUGIN (object));
+        g_return_if_fail (SAGARMATHA_IS_XSETTINGS_PLUGIN (object));
 
         g_debug ("SagarmathaSettingsXSettingsPlugin finalizing");
 
-        plugin = CINNAMON_XSETTINGS_PLUGIN (object);
+        plugin = SAGARMATHA_XSETTINGS_PLUGIN (object);
 
         g_return_if_fail (plugin->priv != NULL);
 
@@ -75,7 +75,7 @@ impl_activate (SagarmathaSettingsPlugin *plugin)
         g_debug ("Activating xsettings plugin");
 
         error = NULL;
-        res = sagarmatha_xsettings_manager_start (CINNAMON_XSETTINGS_PLUGIN (plugin)->priv->manager, &error);
+        res = sagarmatha_xsettings_manager_start (SAGARMATHA_XSETTINGS_PLUGIN (plugin)->priv->manager, &error);
         if (! res) {
                 g_warning ("Unable to start xsettings manager: %s", error->message);
                 g_error_free (error);
@@ -86,14 +86,14 @@ static void
 impl_deactivate (SagarmathaSettingsPlugin *plugin)
 {
         g_debug ("Deactivating xsettings plugin");
-        sagarmatha_xsettings_manager_stop (CINNAMON_XSETTINGS_PLUGIN (plugin)->priv->manager);
+        sagarmatha_xsettings_manager_stop (SAGARMATHA_XSETTINGS_PLUGIN (plugin)->priv->manager);
 }
 
 static void
 sagarmatha_xsettings_plugin_class_init (SagarmathaSettingsXSettingsPluginClass *klass)
 {
         GObjectClass             *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = sagarmatha_xsettings_plugin_finalize;
 

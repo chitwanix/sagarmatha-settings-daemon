@@ -115,7 +115,7 @@ sd_source_new (void)
 
 static void     sagarmatha_settings_session_finalize	(GObject		*object);
 
-#define CINNAMON_SETTINGS_SESSION_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), CINNAMON_TYPE_SETTINGS_SESSION, SagarmathaSettingsSessionPrivate))
+#define SAGARMATHA_SETTINGS_SESSION_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), SAGARMATHA_TYPE_SETTINGS_SESSION, SagarmathaSettingsSessionPrivate))
 
 #define CONSOLEKIT_NAME			"org.freedesktop.ConsoleKit"
 #define CONSOLEKIT_PATH			"/org/freedesktop/ConsoleKit"
@@ -149,8 +149,8 @@ G_DEFINE_TYPE (SagarmathaSettingsSession, sagarmatha_settings_session, G_TYPE_OB
 SagarmathaSettingsSessionState
 sagarmatha_settings_session_get_state (SagarmathaSettingsSession *session)
 {
-	g_return_val_if_fail (CINNAMON_IS_SETTINGS_SESSION (session),
-			      CINNAMON_SETTINGS_SESSION_STATE_UNKNOWN);
+	g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_SESSION (session),
+			      SAGARMATHA_SETTINGS_SESSION_STATE_UNKNOWN);
 	return session->priv->state;
 }
 
@@ -160,8 +160,8 @@ sagarmatha_settings_session_set_state (SagarmathaSettingsSession *session,
 {
         SagarmathaSettingsSessionState  state;
 
-        state = active ? CINNAMON_SETTINGS_SESSION_STATE_ACTIVE
-                       : CINNAMON_SETTINGS_SESSION_STATE_INACTIVE;
+        state = active ? SAGARMATHA_SETTINGS_SESSION_STATE_ACTIVE
+                       : SAGARMATHA_SETTINGS_SESSION_STATE_INACTIVE;
         if (session->priv->state != state) {
                 session->priv->state = state;
                 g_object_notify (G_OBJECT (session), "state");
@@ -174,7 +174,7 @@ sagarmatha_settings_session_get_property (GObject *object,
 				     GValue *value,
 				     GParamSpec *pspec)
 {
-	SagarmathaSettingsSession *session = CINNAMON_SETTINGS_SESSION (object);
+	SagarmathaSettingsSession *session = SAGARMATHA_SETTINGS_SESSION (object);
 
 	switch (prop_id) {
 	case PROP_STATE:
@@ -192,11 +192,11 @@ sagarmatha_settings_session_state_get_type (void)
 	static GType etype = 0;
 	if (etype == 0) {
 		static const GEnumValue values[] = {
-			{ CINNAMON_SETTINGS_SESSION_STATE_UNKNOWN,
+			{ SAGARMATHA_SETTINGS_SESSION_STATE_UNKNOWN,
 			  "unknown", "Unknown" },
-			{ CINNAMON_SETTINGS_SESSION_STATE_ACTIVE,
+			{ SAGARMATHA_SETTINGS_SESSION_STATE_ACTIVE,
 			  "active", "Active" },
-			{ CINNAMON_SETTINGS_SESSION_STATE_INACTIVE,
+			{ SAGARMATHA_SETTINGS_SESSION_STATE_INACTIVE,
 			  "inactive", "Inactive" },
 			{ 0, NULL, NULL }
 			};
@@ -218,8 +218,8 @@ sagarmatha_settings_session_class_init (SagarmathaSettingsSessionClass *klass)
 					 g_param_spec_enum ("state",
 							    "The session state",
 							    NULL,
-							    CINNAMON_TYPE_SETTINGS_SESSION_STATE,
-							    CINNAMON_SETTINGS_SESSION_STATE_UNKNOWN,
+							    SAGARMATHA_TYPE_SETTINGS_SESSION_STATE,
+							    SAGARMATHA_SETTINGS_SESSION_STATE_UNKNOWN,
 							    G_PARAM_READABLE));
 }
 
@@ -260,7 +260,7 @@ is_active_cb (GObject *source_object, GAsyncResult *res, gpointer user_data)
 	gboolean active = FALSE;
 	GError *error = NULL;
 	GVariant *result;
-	SagarmathaSettingsSession *session = CINNAMON_SETTINGS_SESSION (user_data);
+	SagarmathaSettingsSession *session = SAGARMATHA_SETTINGS_SESSION (user_data);
 
 	/* is our session active */
 	result = g_dbus_proxy_call_finish (G_DBUS_PROXY (source_object),
@@ -286,7 +286,7 @@ static void
 got_session_proxy_cb (GObject *source_object, GAsyncResult *res, gpointer user_data)
 {
 	GError *error = NULL;
-	SagarmathaSettingsSession *session = CINNAMON_SETTINGS_SESSION (user_data);
+	SagarmathaSettingsSession *session = SAGARMATHA_SETTINGS_SESSION (user_data);
 
 	/* connect to session */
 	session->priv->proxy_session = g_dbus_proxy_new_for_bus_finish (res,
@@ -315,7 +315,7 @@ got_session_path_cb (GObject *source_object, GAsyncResult *res, gpointer user_da
 {
 	GVariant *result;
 	GError *error = NULL;
-	SagarmathaSettingsSession *session = CINNAMON_SETTINGS_SESSION (user_data);
+	SagarmathaSettingsSession *session = SAGARMATHA_SETTINGS_SESSION (user_data);
 
 	result = g_dbus_proxy_call_finish (G_DBUS_PROXY (source_object),
 					   res,
@@ -349,7 +349,7 @@ got_manager_proxy_cb (GObject *source_object, GAsyncResult *res, gpointer user_d
 	GDBusProxy *proxy_manager;
 	GError *error = NULL;
 	guint32 pid;
-	SagarmathaSettingsSession *session = CINNAMON_SETTINGS_SESSION (user_data);
+	SagarmathaSettingsSession *session = SAGARMATHA_SETTINGS_SESSION (user_data);
 
 	proxy_manager = g_dbus_proxy_new_for_bus_finish (res, &error);
 	if (proxy_manager == NULL) {
@@ -376,7 +376,7 @@ got_manager_proxy_cb (GObject *source_object, GAsyncResult *res, gpointer user_d
 static void
 sagarmatha_settings_session_init (SagarmathaSettingsSession *session)
 {
-	session->priv = CINNAMON_SETTINGS_SESSION_GET_PRIVATE (session);
+	session->priv = SAGARMATHA_SETTINGS_SESSION_GET_PRIVATE (session);
 
 #ifdef HAVE_SYSTEMD
         sd_pid_get_session (getpid(), &session->priv->session_id);
@@ -407,7 +407,7 @@ sagarmatha_settings_session_finalize (GObject *object)
 {
 	SagarmathaSettingsSession *session;
 
-	session = CINNAMON_SETTINGS_SESSION (object);
+	session = SAGARMATHA_SETTINGS_SESSION (object);
 
         g_free (session->priv->session_id);
 
@@ -431,6 +431,6 @@ SagarmathaSettingsSession *
 sagarmatha_settings_session_new (void)
 {
 	SagarmathaSettingsSession *session;
-	session = g_object_new (CINNAMON_TYPE_SETTINGS_SESSION, NULL);
-	return CINNAMON_SETTINGS_SESSION (session);
+	session = g_object_new (SAGARMATHA_TYPE_SETTINGS_SESSION, NULL);
+	return SAGARMATHA_SETTINGS_SESSION (session);
 }

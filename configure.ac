@@ -47,7 +47,7 @@ GLIB_REQUIRED_VERSION=2.31.0
 GTK_REQUIRED_VERSION=3.3.18
 GCONF_REQUIRED_VERSION=2.6.1
 GIO_REQUIRED_VERSION=2.26.0
-CINNAMON_DESKTOP_REQUIRED_VERSION=1.0.0
+SAGARMATHA_DESKTOP_REQUIRED_VERSION=1.0.0
 LIBNOTIFY_REQUIRED_VERSION=0.7.3
 UPOWER_GLIB_REQUIRED_VERSION=0.9.1
 PA_REQUIRED_VERSION=0.9.16
@@ -97,7 +97,7 @@ GLIB_GSETTINGS
 dnl ---------------------------------------------------------------------------
 dnl - Check for gnome-desktop
 dnl ---------------------------------------------------------------------------
-PKG_CHECK_MODULES(CINNAMON_DESKTOP, sagarmatha-desktop >= $CINNAMON_DESKTOP_REQUIRED_VERSION)
+PKG_CHECK_MODULES(SAGARMATHA_DESKTOP, sagarmatha-desktop >= $SAGARMATHA_DESKTOP_REQUIRED_VERSION)
 
 dnl ---------------------------------------------------------------------------
 dnl - Check for LCMS2
@@ -212,14 +212,14 @@ dnl ---------------------------------------------------------------------------
 dnl - xrandr plugin stuff
 dnl ---------------------------------------------------------------------------
 
-PKG_CHECK_MODULES(XRANDR, [sagarmatha-desktop >= $CINNAMON_DESKTOP_REQUIRED_VERSION upower-glib >= $UPOWER_REQUIRED_VERSION])
+PKG_CHECK_MODULES(XRANDR, [sagarmatha-desktop >= $SAGARMATHA_DESKTOP_REQUIRED_VERSION upower-glib >= $UPOWER_REQUIRED_VERSION])
 
 dnl ---------------------------------------------------------------------------
 dnl - orientation plugin stuff
 dnl ---------------------------------------------------------------------------
 
 if test x$have_gudev != xno; then
-	PKG_CHECK_MODULES(ORIENTATION, [sagarmatha-desktop >= $CINNAMON_DESKTOP_REQUIRED_VERSION gudev-1.0])
+	PKG_CHECK_MODULES(ORIENTATION, [sagarmatha-desktop >= $SAGARMATHA_DESKTOP_REQUIRED_VERSION gudev-1.0])
 fi
 
 dnl ---------------------------------------------------------------------------
@@ -231,7 +231,7 @@ PKG_CHECK_MODULES(SOUND, [libpulse >= $PA_REQUIRED_VERSION $GUDEV_PKG libpulse-m
 # ---------------------------------------------------------------------------
 # Power
 # ---------------------------------------------------------------------------
-PKG_CHECK_MODULES(POWER, upower-glib >= $UPOWER_REQUIRED_VERSION sagarmatha-desktop >= $CINNAMON_DESKTOP_REQUIRED_VERSION libcanberra-gtk3 libnotify x11 xext)
+PKG_CHECK_MODULES(POWER, upower-glib >= $UPOWER_REQUIRED_VERSION sagarmatha-desktop >= $SAGARMATHA_DESKTOP_REQUIRED_VERSION libcanberra-gtk3 libnotify x11 xext)
 
 if test x$have_gudev != xno; then
 	PKG_CHECK_MODULES(BACKLIGHT_HELPER,
@@ -244,7 +244,7 @@ dnl ---------------------------------------------------------------------------
 dnl - color
 dnl ---------------------------------------------------------------------------
 
-PKG_CHECK_MODULES(COLOR, [colord >= 0.1.9 sagarmatha-desktop >= $CINNAMON_DESKTOP_REQUIRED_VERSION libcanberra-gtk3])
+PKG_CHECK_MODULES(COLOR, [colord >= 0.1.9 sagarmatha-desktop >= $SAGARMATHA_DESKTOP_REQUIRED_VERSION libcanberra-gtk3])
 
 dnl ==============================================
 dnl smartcard section

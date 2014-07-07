@@ -32,7 +32,7 @@ libkeyboard_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
 	-I$(top_srcdir)/data				\
 	-DDATADIR=\""$(pkgdatadir)"\"			\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	$(AM_CPPFLAGS)
 
 libkeyboard_la_CFLAGS = \

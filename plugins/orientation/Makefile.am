@@ -10,7 +10,7 @@ csd_test_orientation_SOURCES =		\
 csd_test_orientation_CFLAGS =					\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-I$(top_srcdir)/plugins/common				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	$(ORIENTATION_CFLAGS)					\
 	$(PLUGIN_CFLAGS)					\
 	$(SETTINGS_PLUGIN_CFLAGS)				\
@@ -34,7 +34,7 @@ liborientation_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
 	-I$(top_srcdir)/plugins/common/			\
 	-I$(top_srcdir)/data/				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	-DLIBEXECDIR=\""$(libexecdir)"\" 		\
 	$(AM_CPPFLAGS)
 

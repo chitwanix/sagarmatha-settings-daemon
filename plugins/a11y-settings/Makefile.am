@@ -10,7 +10,7 @@ csd_test_a11y_settings_SOURCES =	\
 csd_test_a11y_settings_CFLAGS =					\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-I$(top_srcdir)/plugins/common				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	$(PLUGIN_CFLAGS)					\
 	$(SETTINGS_PLUGIN_CFLAGS)				\
 	$(AM_CFLAGS)
@@ -31,7 +31,7 @@ liba11y_settings_la_SOURCES = 		\
 
 liba11y_settings_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	$(AM_CPPFLAGS)
 
 liba11y_settings_la_CFLAGS = \

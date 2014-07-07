@@ -34,7 +34,7 @@ struct CsdOrientationPluginPrivate {
 
 #define CSD_ORIENTATION_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_ORIENTATION_PLUGIN, CsdOrientationPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdOrientationPlugin, csd_orientation_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdOrientationPlugin, csd_orientation_plugin)
 
 static void
 csd_orientation_plugin_init (CsdOrientationPlugin *plugin)
@@ -94,7 +94,7 @@ static void
 csd_orientation_plugin_class_init (CsdOrientationPluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_orientation_plugin_finalize;
 

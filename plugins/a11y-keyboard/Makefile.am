@@ -21,7 +21,7 @@ csd_test_a11y_keyboard_SOURCES =		\
 csd_test_a11y_keyboard_CFLAGS =					\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-I$(top_srcdir)/plugins/common				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	-DGTKBUILDERDIR=\""$(pkgdatadir)"\"			\
 	$(PLUGIN_CFLAGS)					\
 	$(LIBNOTIFY_CFLAGS)					\
@@ -46,7 +46,7 @@ test_a11y_preferences_dialog_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-DPIXMAPDIR=\""$(pkgdatadir)"\"				\
 	-DGTKBUILDERDIR=\""$(pkgdatadir)"\"				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	$(AM_CPPFLAGS)
 
 test_a11y_preferences_dialog_CFLAGS = \
@@ -74,7 +74,7 @@ liba11y_keyboard_la_SOURCES = 		\
 
 liba11y_keyboard_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	-DGTKBUILDERDIR=\""$(gtkbuilderdir)"\" \
 	$(AM_CPPFLAGS)
 

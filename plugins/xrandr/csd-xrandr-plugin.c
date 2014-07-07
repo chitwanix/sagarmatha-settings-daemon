@@ -33,7 +33,7 @@ struct CsdXrandrPluginPrivate {
 
 #define CSD_XRANDR_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_XRANDR_PLUGIN, CsdXrandrPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdXrandrPlugin, csd_xrandr_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdXrandrPlugin, csd_xrandr_plugin)
 
 static void
 csd_xrandr_plugin_init (CsdXrandrPlugin *plugin)
@@ -93,7 +93,7 @@ static void
 csd_xrandr_plugin_class_init (CsdXrandrPluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_xrandr_plugin_finalize;
 

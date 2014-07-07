@@ -67,11 +67,11 @@
 #define CSD_MEDIA_KEYS_DBUS_PATH GNOME_DBUS_PATH "/MediaKeys"
 #define CSD_MEDIA_KEYS_DBUS_NAME GNOME_DBUS_NAME ".MediaKeys"
 
-#define CINNAMON_DBUS_PATH "/org/sagarmatha/SettingsDaemon"
-#define CINNAMON_DBUS_NAME "org.sagarmatha.SettingsDaemon"
+#define SAGARMATHA_DBUS_PATH "/org/sagarmatha/SettingsDaemon"
+#define SAGARMATHA_DBUS_NAME "org.sagarmatha.SettingsDaemon"
 
-#define CINNAMON_KEYBINDINGS_PATH CINNAMON_DBUS_PATH "/KeybindingHandler"
-#define CINNAMON_KEYBINDINGS_NAME CINNAMON_DBUS_NAME ".KeybindingHandler"
+#define SAGARMATHA_KEYBINDINGS_PATH SAGARMATHA_DBUS_PATH "/KeybindingHandler"
+#define SAGARMATHA_KEYBINDINGS_NAME SAGARMATHA_DBUS_NAME ".KeybindingHandler"
 
 #define GNOME_SESSION_DBUS_NAME "org.gnome.SessionManager"
 #define GNOME_SESSION_DBUS_PATH "/org/gnome/SessionManager"
@@ -2447,7 +2447,7 @@ on_bus_gotten (GObject             *source_object,
                                            NULL);
 
         g_dbus_connection_register_object (connection,
-                                           CINNAMON_KEYBINDINGS_PATH,
+                                           SAGARMATHA_KEYBINDINGS_PATH,
                                            manager->priv->kb_introspection_data->interfaces[0],
                                            &interface_vtable,
                                            manager,

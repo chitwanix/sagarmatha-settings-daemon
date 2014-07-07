@@ -2975,7 +2975,7 @@ idle_set_mode (CsdPowerManager *manager, CsdPowerIdleMode mode)
 
         /* ensure we're still on an active console */
         state = sagarmatha_settings_session_get_state (manager->priv->session);
-        if (state == CINNAMON_SETTINGS_SESSION_STATE_INACTIVE) {
+        if (state == SAGARMATHA_SETTINGS_SESSION_STATE_INACTIVE) {
                 g_debug ("ignoring state transition to %s as inactive",
                          idle_mode_to_string (mode));
                 return;

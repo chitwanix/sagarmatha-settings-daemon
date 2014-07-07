@@ -10,7 +10,7 @@ csd_test_sound_SOURCES =	\
 csd_test_sound_CFLAGS =						\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-I$(top_srcdir)/plugins/common				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	$(SOUND_CFLAGS)						\
 	$(PLUGIN_CFLAGS)					\
 	$(SETTINGS_PLUGIN_CFLAGS)				\
@@ -33,7 +33,7 @@ libsound_la_SOURCES = \
 
 libsound_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon \
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	$(AM_CPPFLAGS)
 
 libsound_la_CFLAGS = \

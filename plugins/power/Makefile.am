@@ -19,7 +19,7 @@ libpower_la_CPPFLAGS = \
 	-I$(top_srcdir)/data/				\
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
 	-I$(top_srcdir)/plugins/common			\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	-DGTKBUILDERDIR=\""$(pkgdatadir)"\"		\
 	-DSBINDIR=\"$(sbindir)\"			\
 	-DLIBEXECDIR=\"$(libexecdir)\"			\

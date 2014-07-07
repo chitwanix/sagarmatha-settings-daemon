@@ -11,7 +11,7 @@ libdummy_la_SOURCES = 		\
 
 libdummy_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	$(AM_CPPFLAGS)
 
 libdummy_la_CFLAGS = \

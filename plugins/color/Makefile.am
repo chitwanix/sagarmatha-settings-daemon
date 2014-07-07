@@ -17,7 +17,7 @@ libcolor_la_SOURCES = 			\
 
 libcolor_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	-DBINDIR=\"$(bindir)\"				\
 	$(AM_CPPFLAGS)
 

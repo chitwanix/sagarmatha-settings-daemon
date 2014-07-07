@@ -33,7 +33,7 @@ struct CsdPrintNotificationsPluginPrivate {
 
 #define CSD_PRINT_NOTIFICATIONS_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_PRINT_NOTIFICATIONS_PLUGIN, CsdPrintNotificationsPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdPrintNotificationsPlugin, csd_print_notifications_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdPrintNotificationsPlugin, csd_print_notifications_plugin)
 
 static void
 csd_print_notifications_plugin_init (CsdPrintNotificationsPlugin *plugin)
@@ -112,7 +112,7 @@ static void
 csd_print_notifications_plugin_class_init (CsdPrintNotificationsPluginClass *klass)
 {
         GObjectClass             *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_print_notifications_plugin_finalize;
 

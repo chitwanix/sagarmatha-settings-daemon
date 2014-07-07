@@ -293,7 +293,7 @@ session_state_changed (SagarmathaSettingsSession *session, GParamSpec *pspec, gp
         CsdAutomountManager *manager = user_data;
         CsdAutomountManagerPrivate *p = manager->priv;
 
-        if (sagarmatha_settings_session_get_state (session) == CINNAMON_SETTINGS_SESSION_STATE_ACTIVE) {
+        if (sagarmatha_settings_session_get_state (session) == SAGARMATHA_SETTINGS_SESSION_STATE_ACTIVE) {
                 p->session_is_active = TRUE;
         }
         else {

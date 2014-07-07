@@ -34,7 +34,7 @@ struct CsdColorPluginPrivate {
 
 #define CSD_COLOR_PLUGIN_GET_PRIVATE(object) (G_TYPE_INSTANCE_GET_PRIVATE ((object), CSD_TYPE_COLOR_PLUGIN, CsdColorPluginPrivate))
 
-CINNAMON_SETTINGS_PLUGIN_REGISTER (CsdColorPlugin, csd_color_plugin)
+SAGARMATHA_SETTINGS_PLUGIN_REGISTER (CsdColorPlugin, csd_color_plugin)
 
 static void
 csd_color_plugin_init (CsdColorPlugin *plugin)
@@ -94,7 +94,7 @@ static void
 csd_color_plugin_class_init (CsdColorPluginClass *klass)
 {
         GObjectClass           *object_class = G_OBJECT_CLASS (klass);
-        SagarmathaSettingsPluginClass *plugin_class = CINNAMON_SETTINGS_PLUGIN_CLASS (klass);
+        SagarmathaSettingsPluginClass *plugin_class = SAGARMATHA_SETTINGS_PLUGIN_CLASS (klass);
 
         object_class->finalize = csd_color_plugin_finalize;
 

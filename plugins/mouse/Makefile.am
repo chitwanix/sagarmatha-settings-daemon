@@ -12,7 +12,7 @@ libmouse_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
 	-I$(top_srcdir)/plugins/common/			\
 	-I$(top_srcdir)/data/				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	-DLIBEXECDIR=\""$(libexecdir)"\" \
 	$(AM_CPPFLAGS)
 
@@ -63,7 +63,7 @@ csd_test_mouse_CPPFLAGS =					\
 	-I$(top_srcdir)/data/					\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-I$(top_srcdir)/plugins/common				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	-DLIBEXECDIR=\""$(libexecdir)"\"			\
 	$(AM_CPPFLAGS)
 

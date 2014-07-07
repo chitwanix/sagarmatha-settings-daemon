@@ -41,7 +41,7 @@ libhousekeeping_la_SOURCES =		\
 
 libhousekeeping_la_CPPFLAGS = 					\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	$(AM_CPPFLAGS)
 
 libhousekeeping_la_CFLAGS = 		\

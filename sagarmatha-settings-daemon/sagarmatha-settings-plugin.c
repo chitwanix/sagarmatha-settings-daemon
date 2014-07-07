@@ -47,15 +47,15 @@ sagarmatha_settings_plugin_init (SagarmathaSettingsPlugin *plugin)
 void
 sagarmatha_settings_plugin_activate (SagarmathaSettingsPlugin *plugin)
 {
-        g_return_if_fail (CINNAMON_IS_SETTINGS_PLUGIN (plugin));
+        g_return_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN (plugin));
 
-        CINNAMON_SETTINGS_PLUGIN_GET_CLASS (plugin)->activate (plugin);
+        SAGARMATHA_SETTINGS_PLUGIN_GET_CLASS (plugin)->activate (plugin);
 }
 
 void
 sagarmatha_settings_plugin_deactivate  (SagarmathaSettingsPlugin *plugin)
 {
-        g_return_if_fail (CINNAMON_IS_SETTINGS_PLUGIN (plugin));
+        g_return_if_fail (SAGARMATHA_IS_SETTINGS_PLUGIN (plugin));
 
-        CINNAMON_SETTINGS_PLUGIN_GET_CLASS (plugin)->deactivate (plugin);
+        SAGARMATHA_SETTINGS_PLUGIN_GET_CLASS (plugin)->deactivate (plugin);
 }

@@ -20,7 +20,7 @@ libclipboard_la_SOURCES = 	\
 libclipboard_la_CPPFLAGS = \
 	$(PLUGIN_CFLAGS)		\
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	$(AM_CPPFLAGS)
 
 libclipboard_la_CFLAGS = \

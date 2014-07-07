@@ -11,7 +11,7 @@ libprint_notifications_la_SOURCES = 		\
 
 libprint_notifications_la_CPPFLAGS = \
 	-I$(top_srcdir)/sagarmatha-settings-daemon		\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\" \
 	-DLIBEXECDIR=\""$(libexecdir)"\" \
 	$(AM_CPPFLAGS)
 
@@ -40,7 +40,7 @@ csd_printer_SOURCES = 	\
 csd_printer_CFLAGS = \
 	$(SETTINGS_PLUGIN_CFLAGS)				\
 	$(LIBNOTIFY_CFLAGS)					\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	$(AM_CFLAGS)
 
 csd_printer_LDADD  = 		\
@@ -58,7 +58,7 @@ csd_test_print_notifications_SOURCES =		\
 csd_test_print_notifications_CPPFLAGS =				\
 	-I$(top_srcdir)/sagarmatha-settings-daemon			\
 	-I$(top_srcdir)/plugins/common				\
-	-DCINNAMON_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
+	-DSAGARMATHA_SETTINGS_LOCALEDIR=\""$(datadir)/locale"\"	\
 	-DLIBEXECDIR=\""$(libexecdir)"\"			\
 	$(AM_CPPFLAGS)
 

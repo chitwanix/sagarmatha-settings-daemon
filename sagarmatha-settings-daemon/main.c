@@ -521,7 +521,7 @@ main (int argc, char *argv[])
 
         sagarmatha_settings_profile_start (NULL);
 
-        bindtextdomain (GETTEXT_PACKAGE, CINNAMON_SETTINGS_LOCALEDIR);
+        bindtextdomain (GETTEXT_PACKAGE, SAGARMATHA_SETTINGS_LOCALEDIR);
         bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         textdomain (GETTEXT_PACKAGE);
         setlocale (LC_ALL, "");

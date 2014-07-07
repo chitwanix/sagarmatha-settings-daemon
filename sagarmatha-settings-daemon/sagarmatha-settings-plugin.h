@@ -19,19 +19,19 @@
  * Boston, MA 02110-1335, USA.
  */
 
-#ifndef __CINNAMON_SETTINGS_PLUGIN_H__
-#define __CINNAMON_SETTINGS_PLUGIN_H__
+#ifndef __SAGARMATHA_SETTINGS_PLUGIN_H__
+#define __SAGARMATHA_SETTINGS_PLUGIN_H__
 
 #include <glib-object.h>
 #include <gmodule.h>
 
 G_BEGIN_DECLS
-#define CINNAMON_TYPE_SETTINGS_PLUGIN              (sagarmatha_settings_plugin_get_type())
-#define CINNAMON_SETTINGS_PLUGIN(obj)              (G_TYPE_CHECK_INSTANCE_CAST((obj), CINNAMON_TYPE_SETTINGS_PLUGIN, SagarmathaSettingsPlugin))
-#define CINNAMON_SETTINGS_PLUGIN_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST((klass),  CINNAMON_TYPE_SETTINGS_PLUGIN, SagarmathaSettingsPluginClass))
-#define CINNAMON_IS_SETTINGS_PLUGIN(obj)           (G_TYPE_CHECK_INSTANCE_TYPE((obj), CINNAMON_TYPE_SETTINGS_PLUGIN))
-#define CINNAMON_IS_SETTINGS_PLUGIN_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), CINNAMON_TYPE_SETTINGS_PLUGIN))
-#define CINNAMON_SETTINGS_PLUGIN_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS((obj),  CINNAMON_TYPE_SETTINGS_PLUGIN, SagarmathaSettingsPluginClass))
+#define SAGARMATHA_TYPE_SETTINGS_PLUGIN              (sagarmatha_settings_plugin_get_type())
+#define SAGARMATHA_SETTINGS_PLUGIN(obj)              (G_TYPE_CHECK_INSTANCE_CAST((obj), SAGARMATHA_TYPE_SETTINGS_PLUGIN, SagarmathaSettingsPlugin))
+#define SAGARMATHA_SETTINGS_PLUGIN_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST((klass),  SAGARMATHA_TYPE_SETTINGS_PLUGIN, SagarmathaSettingsPluginClass))
+#define SAGARMATHA_IS_SETTINGS_PLUGIN(obj)           (G_TYPE_CHECK_INSTANCE_TYPE((obj), SAGARMATHA_TYPE_SETTINGS_PLUGIN))
+#define SAGARMATHA_IS_SETTINGS_PLUGIN_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), SAGARMATHA_TYPE_SETTINGS_PLUGIN))
+#define SAGARMATHA_SETTINGS_PLUGIN_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS((obj),  SAGARMATHA_TYPE_SETTINGS_PLUGIN, SagarmathaSettingsPluginClass))
 
 typedef struct
 {
@@ -55,12 +55,12 @@ void             sagarmatha_settings_plugin_deactivate         (SagarmathaSettin
 /*
  * Utility macro used to register plugins
  *
- * use: CINNAMON_SETTINGS_PLUGIN_REGISTER (PluginName, plugin_name)
+ * use: SAGARMATHA_SETTINGS_PLUGIN_REGISTER (PluginName, plugin_name)
  */
-#define CINNAMON_SETTINGS_PLUGIN_REGISTER(PluginName, plugin_name)                \
+#define SAGARMATHA_SETTINGS_PLUGIN_REGISTER(PluginName, plugin_name)                \
         G_DEFINE_DYNAMIC_TYPE (PluginName,                                     \
                                plugin_name,                                    \
-                               CINNAMON_TYPE_SETTINGS_PLUGIN)                     \
+                               SAGARMATHA_TYPE_SETTINGS_PLUGIN)                     \
                                                                                \
 G_MODULE_EXPORT GType                                                          \
 register_sagarmatha_settings_plugin (GTypeModule *type_module)                      \
@@ -77,4 +77,4 @@ plugin_name##_class_finalize (PluginName##Class *plugin_name##_class)          \
 
 G_END_DECLS
 
-#endif  /* __CINNAMON_SETTINGS_PLUGIN_H__ */
+#endif  /* __SAGARMATHA_SETTINGS_PLUGIN_H__ */

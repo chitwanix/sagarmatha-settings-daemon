@@ -52,7 +52,7 @@ sagarmatha_settings_module_load (GTypeModule *gmodule)
         SagarmathaSettingsModuleRegisterFunc register_func;
         gboolean                        res;
 
-        module = CINNAMON_SETTINGS_MODULE (gmodule);
+        module = SAGARMATHA_SETTINGS_MODULE (gmodule);
 
         g_debug ("Loading %s", module->path);
 
@@ -88,7 +88,7 @@ sagarmatha_settings_module_load (GTypeModule *gmodule)
 static void
 sagarmatha_settings_module_unload (GTypeModule *gmodule)
 {
-        SagarmathaSettingsModule *module = CINNAMON_SETTINGS_MODULE (gmodule);
+        SagarmathaSettingsModule *module = SAGARMATHA_SETTINGS_MODULE (gmodule);
 
         g_debug ("Unloading %s", module->path);
 
@@ -101,7 +101,7 @@ sagarmatha_settings_module_unload (GTypeModule *gmodule)
 const gchar *
 sagarmatha_settings_module_get_path (SagarmathaSettingsModule *module)
 {
-        g_return_val_if_fail (CINNAMON_IS_SETTINGS_MODULE (module), NULL);
+        g_return_val_if_fail (SAGARMATHA_IS_SETTINGS_MODULE (module), NULL);
 
         return module->path;
 }
@@ -127,7 +127,7 @@ sagarmatha_settings_module_init (SagarmathaSettingsModule *module)
 static void
 sagarmatha_settings_module_finalize (GObject *object)
 {
-        SagarmathaSettingsModule *module = CINNAMON_SETTINGS_MODULE (object);
+        SagarmathaSettingsModule *module = SAGARMATHA_SETTINGS_MODULE (object);
 
         g_debug ("SagarmathaSettingsModule %p finalizing", module);
 
@@ -157,7 +157,7 @@ sagarmatha_settings_module_new (const char *path)
                 return NULL;
         }
 
-        result = g_object_new (CINNAMON_TYPE_SETTINGS_MODULE, NULL);
+        result = g_object_new (SAGARMATHA_TYPE_SETTINGS_MODULE, NULL);
 
         g_type_module_set_name (G_TYPE_MODULE (result), path);
         result->path = g_strdup (path);
